@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+
+{% block mainBlock %}
+	<div class="ui inverted menu" id="navibar">
+		<div class="ui container">
+			<a href="/" class="header item">
+				<!--img class="logo" src=""-->
+						Gensokyo-Yakumo
+			</a>
+			<a class="item {% block naviIndexClass %}{%endblock%}" href="/">狀態總覽</a>
+			<a class="item {% block  naviProjectClass %}{%endblock%}" href="/project">專案</a>
+			<a class="item {% block naviWatchClass %}{%endblock%}" href="/watch">模組倉庫</a>
+			<!--a class="item" href="#">？？？？</a>
+			<a class="right floated item">管理員：{% block Name %}{% endblock %}</a>
+			<a class="item" href="#">登出</a-->
+		</div>
+	</div>
+	{% block mainContentArea %}{% endblock %}
+{% endblock %}
