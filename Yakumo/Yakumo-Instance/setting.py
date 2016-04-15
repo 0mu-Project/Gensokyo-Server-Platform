@@ -7,7 +7,7 @@
 # Only for 0MuServer / 0muMDAU
 
 # Server Setting
-host = '127.0.0.1'
+host = '0.0.0.0'
 port = 8509
 
 # Github Setting
