@@ -19,8 +19,8 @@ RUN mkdir -p /root/.ssh/ && chmod 700 /root/.ssh/
 COPY id_rsa.pub /root/.ssh/authorized_keys
 RUN chmod 600 /root/.ssh/authorized_keys
 EXPOSE 8509 22 
-RUN apt-get install -y supervisor
 RUN git clone https://github.com/0mu-Project/Gensokyo-Server-Platform /root/Gensokyo-Server-Platform
+RUN apt-get install -y supervisor
 RUN mkdir -p /root/Gensokyo-Server-Platform/debug
 RUN mkdir -p /root/Gensokyo-Server-Platform/sqlite
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
