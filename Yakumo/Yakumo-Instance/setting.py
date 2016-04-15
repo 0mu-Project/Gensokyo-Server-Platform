@@ -20,7 +20,7 @@ debug = 1
 s_log = '../../debug/Yakumo.log'
 
 # Database Setting
-sqliteFile = '../../../sqlite/Yakumo.db'
+sqliteFile = '../../sqlite/Yakumo.db'
 
 ##
 yourkey = 'jfowjwo9w??{{@@jrejk__'

@@ -29,3 +29,12 @@ if __name__ == '__main__':
             socketio.run(app, debug=debugB, log=logdebug, host=str(setting.host), port=setting.port)
     else:
         InitDB.createTable()
+        if setting.debug == 0:
+            debugB = False 
+            socketio.run(app, debug=debugB, host=str(setting.host), port=setting.port)
+        else:
+            debugB = True
+            logging.basicConfig(filename=setting.s_log, level=logging.WARNING)
+            logdebug = open(setting.s_log, 'w')
+            print('!!!Important : Now is in debug mode.')
+            socketio.run(app, debug=debugB, log=logdebug, host=str(setting.host), port=setting.port)
