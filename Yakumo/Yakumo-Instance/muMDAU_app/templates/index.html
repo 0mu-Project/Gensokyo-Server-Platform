@@ -1,0 +1,106 @@
+{% extends "2row-base.html" %} 
+
+{% block naviIndexClass %}active{% endblock %}
+
+{% block header %}
+<style>
+    .circle-chart { margin:0px auto; width: 100px; position: relative; text-align:center; }
+	.circle-chart__text { font-size:20px; position: absolute; width: 100%; height: 100%; text-align: center; left: 0; top: 10px; line-height: 4; font-family: sans-serif; }
+</style>
+<link rel="stylesheet" href="static/circle/css/circle.css">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+{% endblock %}
+
+{% block title %}Yakumo - Gensokyo Server Platform{% endblock %}
+
+{% block sideFrame %}
+		<a class="active item">效能監控</a>
+		<a class="item">流量監控</a>
+{% endblock %}
+
+{% block mainFrame %}
+  <div class="ui grey segment" id="seg01">
+	<div class="ui breadcrumb">
+		  <div class="section">Yakumo</div>
+		    <div class="divider"> / </div>
+		  <div class="section">狀態總覽</div>
+		    <div class="divider"> / </div>
+		  <div class="active section">效能監控</div>
+	</div>
+	<div class="ui divider"></div>
+	  	  <a class="ui left black ribbon label">
+		  硬體效能監測
+	  	  </a>
+		  <div class="ui grid" style="padding:2.5%;">
+		  <div class="three wide center aligned column">
+				  <div id="circle-chart" class="c100 center p0">
+					  <span id="ctext">Loading</span>
+					  <div class="slice">
+						  <div class="bar"></div>
+						  <div class="fill"></div>
+					  </div>					 
+				  </div>
+			  <br />
+			  <p>處理器( {{core.decode('utf-8')}}C )
+			  </br>
+			  2.6Ghz</p>
+		  </div>
+
+		  <div class="three wide center aligned column">
+				  <div id="mem-chart" class="c100 center p0" >
+					  <span id="mtext">Loading</span>
+					  <div class="slice">
+						  <div class="bar"></div>
+						  <div class="fill"></div>
+					  </div>					 
+				  </div>
+			  <br />
+			  <p>記憶體
+			  <br />
+			  12G</p>
+		  </div>
+		  <div class="three wide center aligned column">
+				  <div id="net-chart" class="c100 center p0">
+					  <span>Ethernet</span>
+					  <div class="slice">
+						  <div class="bar"></div>
+						  <div class="fill"></div>
+					  </div>					 
+				  </div>
+			  <br />
+			  <p id="nets"></p>
+		  </div>
+		  <div class="one wide column">
+		    <div class="ui vertical divider">
+				   Info 
+		   	</div>
+		  </div>
+		  <div class="six wide column">
+			  <div id="system"></div>
+		  </div>
+
+	 </div>
+	<div class="ui divider"></div>
+	<a class="ui left black ribbon label">
+		  系統程式監測
+	</a>
+	</div>
+<script>
+var socket = io.connect('http://' + document.domain + ':' + location.port + '/info');
+$(document).ready(function(){
+		socket.on('info', function(msg){
+		var lastClass = $('#circle-chart').attr('class').split(' ').pop();
+		$("#circle-chart").removeClass(lastClass);
+		$('#circle-chart').toggleClass('p'+ msg.cpuusage);
+		$('#ctext').text(msg.cpuusage + "%");
+		var lastClass = $('#mem-chart').attr('class').split(' ').pop();
+		$("#mem-chart").removeClass(lastClass);
+		$('#mem-chart').toggleClass('p'+ msg.mem);
+		$('#mtext').text(msg.mem + "%");
+		document.getElementById('nets').innerHTML = "S: "+ msg.ns + "<br />R: "+ msg.nr;
+		document.getElementById('system').innerHTML = "<h3>網域名稱:Gensokyo.io</h3><br />系統負載:"+ msg.lavg + "<br />運作時間:"+ msg.uptime;
+	}
+	)
+}); 
+  </script>
+{% endblock %}

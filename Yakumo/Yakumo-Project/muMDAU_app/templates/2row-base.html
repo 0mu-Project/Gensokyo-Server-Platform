@@ -1,0 +1,19 @@
+{% extends "base-navi.html" %} 
+
+{% block mainContentArea %}
+<div class="ui container grid" id="MainFrame">
+  <div class="thirteen wide column" id="MainFrame">
+{% block mainFrame %}{% endblock %}
+			<div class="ui divider"></div>
+			<p id="copyright">Gensokyo 採用 GPL v3 授權 | 0mu-Project 版權所有 </p>
+			<br />
+  </div>
+  <div class="three wide column">
+    <div class="ui vertical menu sideMenu ">
+      {% block sideFrame %}{% endblock %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

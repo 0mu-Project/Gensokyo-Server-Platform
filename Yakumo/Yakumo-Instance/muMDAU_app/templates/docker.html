@@ -1,0 +1,157 @@
+{% extends "2row-base.html" %} 
+
+{% block naviDockerClass %}active{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block title %}Yakumo - Gensokyo Server Platform{% endblock %}
+
+{% block sideFrame %}
+		<a class="active item">容器管理</a>
+		<a class="item">容器模板</a>
+{% endblock %}
+
+{% block mainFrame %}
+  <div class="ui grey segment">
+	<div class="ui breadcrumb">
+		  <div class="section">Hakurei</div>
+		    <div class="divider"> / </div>
+		  <div class="section">容器</div>
+		    <div class="divider"> / </div>
+			<div class="active section">容器管理</div>
+	</div>
+	<div class="ui divider"></div>
+		  <div class="sixteen wide  aligned column">
+	  	  <a class="ui left black ribbon label">
+		  新增容器
+	  	  </a>
+		  <div class="ui middle aligned very relaxed stackable grid" style="padding: 12px 0px 0px 0px">
+			  <div class="eleven wide column" style="padding-right:14px;">
+				  <div class="ui small fluid  labeled input">
+					  <div class="ui label">
+						  手動輸入 / 透過 Hub 抓取
+					  </div>
+					  <input placeholder="example/example" type="text" >
+				  </div>
+			  </div>
+			  <div class="one center aligned wide column" style="padding:0px;">
+				  Or
+			  </div>
+			  <div class="four wide column" style="padding-left:14px;">
+				  <div class="center aligned column">
+					  <div class="ui small fluid green labeled icon button">
+						  <i class="signup icon"></i>
+						  選擇映像
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="ui divider"></div>
+		  <div class="ui small fluid right labeled left icon input">
+			  <i class="tags icon"></i>
+			  <input placeholder="請輸入Container_Name" type="text">
+			  <a class="ui tag label">
+				  進行部屬流程
+			  </a>
+		  </div>
+		  </div>
+		  <div class="ui divider"></div>
+		  <div class="sixteen wide  aligned column">
+	  	  <a class="ui left black ribbon label">
+		  現有容器
+	  	  </a>
+		  <table class="ui compact celled definition table">
+			  <thead>
+				      <tr>
+						  <th></th>
+						  <th>執行</th>
+						  <th>ID</th>
+						  <th>容器名稱</th>
+						  <th>容器映像</th>
+						  <th>Ports (C:H)</th>
+						  <th>執行指令</th>
+						  <th>運作狀況</th>
+					  </tr>
+			  </thead>
+			  <tbody>
+				{% for x in c %}
+				{% if x.get('Status')[0:4] == "Exit"%}
+				  <tr class="error">
+				{% elif x.get('Status')[0:4] == "Crea"%}
+				  <tr class="warning">
+				{% else %}
+				  <tr class="positive">
+  			    {% endif %}
+					  <td class="collapsing">
+						  <div class="ui fitted checkbox">
+							  <input type="checkbox"> <label></label>
+						  </div>
+					  </td>
+					  <td class="collapsing">
+						  <div class="ui fitted slider checkbox">
+				{% if x.get('Status')[0:4] == "Exit"%}
+				<input id="{{x.get('Names')[0].replace('/','')}}" type="checkbox"><label></label>
+				{% elif x.get('Status')[0:4] == "Crea"%}
+				<input id="{{x.get('Names')[0].replace('/','')}}" type="checkbox"><label></label>
+				{% else %}
+				<input id="{{x.get('Names')[0].replace('/','')}}" type="checkbox" checked="True"> <label></label>
+  			    {% endif %}
+						  </div>
+					  </td>
+					  <td>{{x.get('Id')[0:12]}}</td>
+					  <td>{{x.get('Names')[0].replace('/','')}}</td>
+					  <td>{{x.get('Image')}}</td>
+					  <td>
+						  {% if x.get('Ports')== [] %}
+						  None
+						  {% else %}
+					      {% for w in x.get('Ports')%}
+						  {{w.get('PrivatePort')}} :
+						  {{w.get('PublicPort')}}
+						  <br />
+						  {% endfor %}
+						  {% endif %}
+					  </td>
+					  <td>{{x.get('Command')}}</td>
+					  <td>{{x.get('Status')}}</td>
+				  </tr>
+				  {% endfor %}
+				 </tbody>
+				 <tfoot class="full-width">
+				  <tr >
+							      <th colspan="9" style="padding:5px;">
+									<div class="ui right floated tiny green labeled icon button">
+										          <i class="save icon"></i> 備份
+									</div>
+									<div class="ui right floated tiny orange labeled icon button">
+										          <i class="add icon"></i> 鏡像化
+									</div>
+									<div class="ui right floated tiny red icon button">
+										          <i class="remove icon"></i>
+									</div>
+									</th>
+									</tr>
+									</tfoot>
+			  </table>
+			  </div>
+</div>
+<script>
+$(document).ready(function(){
+
+{% for x in c %}
+$('#{{x.get('Names')[0].replace('/','')}}').click(function() {
+	if($('#{{x.get('Names')[0].replace('/','')}}').prop("checked")) {
+		  $.get( "/docker/start/{{ x.get('Names')[0].replace('/','') }}", function( data ) {
+			  location.reload(true);
+		  })
+	} else {
+		  $.get( "/docker/stop/{{ x.get('Names')[0].replace('/','') }}", function( data ) {
+			  location.reload(true);
+		  })
+	}
+})
+{% endfor %}
+})
+</script>
+{% endblock %}

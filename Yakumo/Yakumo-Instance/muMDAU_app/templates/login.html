@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Login Panel{% endblock%}
+{% block header %}
+<style>
+
+body {
+	background-image :url('/static/login.png');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+body > .grid {
+	height: 100%;
+}
+    .image {
+      margin-top: -100px;
+      }
+	.column {
+					      max-width: 450px;
+							      }
+				  
+</style>
+{% endblock%}
+{% block mainBlock %}
+<div class = "ui middle aligned grid">
+	<div class = "column center aligned" style ="left:5%; width:380px;">
+		<h3 class = "ui header"><div class = "content">Gensokyo Login</div></h3>
+	<form class="ui large form" method="post" action="/login">
+		<div class = "ui stacked segment" style="background-color: rgba(255,255,255,0.5);">
+			<div class = "field">
+			<div class = "ui left icon input">
+				<i class = "user icon"></i>
+				<input type="text" name="buser"  class="form-control" placeholder="輸入使用者帳號"></input>
+			</div>
+			</div>
+		
+			<div class = "field">
+			<div class = "ui left icon input">
+				<i class = "lock icon"></i>
+				<input type="password" name="bpass" class="form-control" placeholder="請輸入密碼"></input>
+			</div>
+			</div>
+
+			<div class="ui fluid buttons">
+		  		<button class="ui button">Support</button>
+				<div class="or"></div>
+			  	<button id="login" type="submit" class="ui positive button">登入系統</button>
+			</div>  
+		</div>
+	</form>		
+	</div>
+		</div>
+{% endblock%}
+{% block script %}{% endblock %}

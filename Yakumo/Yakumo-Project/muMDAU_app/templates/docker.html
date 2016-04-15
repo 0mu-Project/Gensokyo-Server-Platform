@@ -1,0 +1,41 @@
+{% extends "2row-base.html" %} 
+
+{% block naviDockerClass %}active{% endblock %}
+
+{% block header %}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+{% endblock %}
+
+{% block title %}Yakumo - Gensokyo Server Platform{% endblock %}
+
+{% block sideFrame %}
+  <div class="item">
+	<div class="header">Hakurei Docker</div>
+	<div class="ui divider"></div>
+	<div class="menu">
+		<a class="active item">容器管理</a>
+		<a class="item">容器模板</a>
+	</div>
+  </div>
+{% endblock %}
+
+{% block mainFrame %}
+<div class="ui segments">
+	  <div class="ui segment" style="padding:8px 14px 8px 14px;">
+	<div class="ui breadcrumb">
+		  <div class="section">Hakurei</div>
+		    <div class="divider"> / </div>
+		  <div class="section">Docker</div>
+		    <div class="divider"> / </div>
+		  <div class="active section">容器管理</div>
+	</div>
+	</div>
+  <div class="ui grey segment" style="height:100%;">
+	  	  <a class="ui left black ribbon label">
+		  現有容器
+	  	  </a>
+	</div>
+</div>
+<script>
+</script>
+{% endblock %}

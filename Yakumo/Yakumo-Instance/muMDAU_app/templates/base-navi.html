@@ -1,0 +1,17 @@
+{% extends "base.html" %} 
+
+{% block mainBlock %}
+	<div class="ui inverted menu" id="navibar">
+		<div class="ui container">
+			<a href="/" class="header item">
+				<!--img class="logo" src=""-->
+						Yakumo-Instance
+			</a>
+			<a class="item {% block naviIndexClass %}{%endblock%}" href="/">狀態總覽</a>
+			<a class="item {% block  naviDockerClass %}{%endblock%}" href="/docker">Docker</a>
+			<a class="item {% block naviWatchClass %}{%endblock%}" href="/terminal">SSH</a>
+			<a class="right float item" href="/logout">登出</a>
+		</div>
+	</div>
+	{% block mainContentArea %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends "2row-base.html" %} 
+
+{% block naviProjectClass %}active{% endblock %}
+
+{% block header %}
+<style>
+    .circle-chart { margin:0px auto; width: 200px; position: relative; text-align:center; }
+	.circle-chart__text { font-size:20px; position: absolute; width: 100%; height: 100%; text-align: center; left: 0; top: 30%; line-height: 4; font-family: sans-serif; }
+	.wrapperblk {
+		  height: 210px;
+					  text-align: center;
+	}
+	.wrapperblk:before {
+		  content: "";
+			    height: 100%;
+					  display: inline-block;
+						    vertical-align: middle;
+	}
+	.centerblk {
+		  display: inline-block;
+			    vertical-align: middle;
+					  width: 96%;
+	}
+
+</style>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+<script src="/static/js-circle-chart/js/circle-chart.js"></script>
+{% endblock %}
+
+{% block title %}Hakurei - Gensokyo Server Platform{% endblock %}
+
+{% block sideFrame %}
+  <div class="item">
+	<div class="header">專案</div>
+	<div class="ui divider"></div>
+	<div class="menu">
+		<a class="active item">專案部屬</a>
+		<a class="item">專案模板</a>
+		<a class="item">專案檢核</a>
+	</div>
+  </div>
+{% endblock %}
+
+{% block mainFrame %}
+<div class="ui segments">
+	  <div class="ui segment" style="padding:8px 14px 8px 14px;">
+	<div class="ui breadcrumb">
+		  <div class="section">Hakurei</div>
+		    <div class="divider"> / </div>
+		  <div class="section">專案</div>
+		    <div class="divider"> / </div>
+		  <div class="active section">專案部屬</div>
+	</div>
+	</div>
+  <div class="ui grey segment">
+	  	  <a class="ui left black ribbon label">
+		  快速(精簡)部屬
+	  	  </a>
+		  <div class="ui grid" style="padding:2.5%;">
+		  <div class="five wide center aligned column">
+				  <div id="project-chart" class="circle-chart  center aligned " >
+					  <a>Loading</a>
+				  </div>
+			  <br />
+			  <p>尚餘空間</p>
+		  </div>
+		  <div class="eleven wide  aligned column">
+			  <div class="wrapperblk">
+				  <div class="centerblk">
+			  <div class="ui small fluid right labeled input">
+				    <div class="ui label">
+						    git@github.com:
+  					</div>
+					<input placeholder="example/example" type="text" >
+					<div class="ui basic label">.git</div>
+			  </div>
+			  <div class="ui divider"></div>
+			  <div class="ui small fluid labeled icon input">
+				    <div class="ui label">
+						    Domain / Url:
+  					</div>
+					<input placeholder="預設網域/無輸入預設為（maindomain/App_Name）" type="text">
+			  </div>
+			  <div class="ui divider"></div>
+			  <div class="ui small fluid right labeled left icon input">
+				    <i class="tags icon"></i>
+				  	<input placeholder="請輸入App_Name" type="text">
+					<a class="ui tag label">
+						快速部屬
+					</a>
+			  </div>
+		  </div>
+		  </div>
+		  </div>
+		  </div>
+	<div class="ui divider"></div>
+	<a class="ui left black ribbon label">
+		  手動(詳細)部屬
+	</a>
+	<div class="ui grid" style="padding:2.5%;">
+		  <div class="sixteen wide  aligned column">
+					  <div class="ui middle aligned very relaxed stackable grid" style="padding:0px;">
+					  	<div class="eleven wide column" style="padding-right:14px;">
+						  <div class="ui small fluid right labeled input">
+							  <div class="ui label">
+					  				  git@github.com:
+			  					  </div>
+					  		  <input placeholder="example/example" type="text" >
+		  					  <div class="ui basic label">.git</div>
+							  </div>
+						  </div>
+						  <div class="one center aligned wide column" style="padding:0px;">
+							  Or
+						  </div>
+						  <div class="four wide column" style="padding-left:14px;">
+						   <div class="center aligned column">
+							       <div class="ui small fluid green labeled icon button">
+									         <i class="signup icon"></i>
+											       git/.tar.gz Push
+								   </div>
+						   </div>
+						  </div>
+						  </div>
+						  <div class="ui divider"></div>
+						  <div class="ui small fluid labeled icon input">
+		  					  <div class="ui label">
+			  					  Domain / Url:
+		  					  </div>
+		  					  <input placeholder="預設網域/無輸入預設為（maindomain/App_Name）" type="text">
+						  </div>
+						  <div class="ui divider"></div>
+						  <div class="ui small fluid right labeled left icon input">
+		  					  <i class="tags icon"></i>
+		  					  <input placeholder="請輸入App_Name" type="text">
+		  					  <a class="ui tag label">
+		  						  進行部屬流程
+		  					  </a>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+</div>
+<script>
+var pl = document.querySelector('#project-chart');
+$(document).ready(function(){ 
+	  document.getElementById('project-chart').innerHTML = "5 / 10 (組)";
+	  new CircleChart(pl,{animationSpeed: 2000,stroke:   5, colour:   '#000',edgeWidth:2,edgeColour:     '#eee',maxVal:   10 });
+})
+</script>
+{% endblock %}
