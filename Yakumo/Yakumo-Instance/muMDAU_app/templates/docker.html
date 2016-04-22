@@ -24,42 +24,34 @@
 	<div class="ui divider"></div>
 		  <div class="sixteen wide  aligned column">
 	  	  <a class="ui left black ribbon label">
-		  新增容器
+		  容器部屬
 	  	  </a>
 		  <div class="ui middle aligned very relaxed stackable grid" style="padding: 12px 0px 0px 0px">
-			  <div class="eleven wide column" style="padding-right:14px;">
-				  <div class="ui small fluid  labeled input">
-					  <div class="ui label">
-						  手動輸入 / 透過 Hub 抓取
-					  </div>
-					  <input placeholder="example/example" type="text" >
-				  </div>
-			  </div>
-			  <div class="one center aligned wide column" style="padding:0px;">
-				  Or
-			  </div>
-			  <div class="four wide column" style="padding-left:14px;">
+			  <div class="four wide column" style="padding-right:14px;">
 				  <div class="center aligned column">
-					  <div class="ui small fluid green labeled icon button">
+					  <div class="ui dimage small fluid green labeled icon button">
 						  <i class="signup icon"></i>
-						  選擇映像
+						  新增/部屬容器
 					  </div>
+				  </div>
+				  {% include "images.html" %}
+				  {% include "containers.html" %}
+
+			  </div>
+			  <div class="one wide column" style="padding-right:14px;">
+				 OR 
+			  </div>
+			  <div class="eleven wide column" style="">
+				  <div class="ui icon fluid small input">
+					    <input placeholder="直接輸入 docker 指令 (ex: docker run --name example ex:example)" type="text">
+						  <i class="circular terminal link icon"></i>
 				  </div>
 			  </div>
 		  </div>
-		  <div class="ui divider"></div>
-		  <div class="ui small fluid right labeled left icon input">
-			  <i class="tags icon"></i>
-			  <input placeholder="請輸入Container_Name" type="text">
-			  <a class="ui tag label">
-				  進行部屬流程
-			  </a>
 		  </div>
-		  </div>
-		  <div class="ui divider"></div>
-		  <div class="sixteen wide  aligned column">
+		  <div class ="ui divider"></div>
 	  	  <a class="ui left black ribbon label">
-		  現有容器
+		  容器一覽
 	  	  </a>
 		  <table class="ui compact celled definition table">
 			  <thead>
@@ -134,11 +126,34 @@
 									</tr>
 									</tfoot>
 			  </table>
-			  </div>
 </div>
 <script>
 $(document).ready(function(){
-
+$('.ui.dropdown')
+	.dropdown({
+		action: 'select',
+		onChange : function(text, value, $selectedItem){
+		document.getElementById('image').innerHTML = "映像Repo：" + text;
+		document.getElementById('cimages').innerHTML = "映像Repo：" + text;
+		document.getElementById('dfile').innerHTML = "DockerFile：不採用" ;
+		document.getElementById('cdfile').innerHTML = "DockerFile：不採用" ;
+		}
+	})
+;
+$('.coupled.modal')
+	  .modal({
+		      allowMultiple: false
+				    })
+;
+$('.dimage.modal')
+	.modal({
+		blurring: true
+	})
+	.modal('attach events', '.dimage.button', 'show')
+;
+	$('.dset.modal')
+		  .modal('attach events', '.dimage.modal .next.button')
+		  ;
 {% for x in c %}
 $('#{{x.get('Names')[0].replace('/','')}}').click(function() {
 	if($('#{{x.get('Names')[0].replace('/','')}}').prop("checked")) {

@@ -4,6 +4,7 @@ from muMDAU_app import app, socketio
 from threading import Thread
 from flask import request, render_template, Blueprint, url_for, redirect, session
 from database import ManageSQL, LoginSQL
+from dbmongo import User
 import subprocess, os
 from subprocess import PIPE
 from time import sleep
@@ -55,7 +56,9 @@ def init():
         passd = request.form['bpass']
         import hashlib
         hashsha = hashlib.sha256(passd.replace('\n', '').encode())
-        ManageSQL.addUser(user, hashsha.hexdigest(), '1', '0')
+        # ManageSQL.addUser(user, hashsha.hexdigest(), '1', '0')
+        User.add(user, hashsha.hexdigest(), '1')
+
         return redirect(url_for('main.index'))
     else:
         return render_template('first.html')

@@ -25,3 +25,7 @@ sqliteFile = '../../sqlite/Yakumo.db'
 ##
 yourkey = 'jfowjwo9w??{{@@jrejk__'
 imgurkey = '0c2b6130b066faf'
+
+##
+mongohost = 'localhost'
+mongop = 27017
