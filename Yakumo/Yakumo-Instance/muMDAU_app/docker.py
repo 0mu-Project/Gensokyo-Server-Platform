@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 # muMDAU_app main / first page 
-from muMDAU_app import app
-from flask import render_template, url_for, redirect, session
+from muMDAU_app import app, socketio
+from threading import Thread
+from flask import render_template, url_for, redirect, session, request 
 from docker import Client
+pullthread = None
 # index page main route page 
 @app.route('/project')
 def pview():
@@ -40,8 +42,25 @@ def dockerstop(Name):
 @app.route('/docker/start/<Name>')
 def dockerstart(Name):
     if 'username' in session:
-        cli = Client(base_url='unix://var/run/docker.sock')
-        cli.start(container=Name)
         return redirect(url_for('dockerview'))
     else:
         return redirect(url_for('main.index'))
+
+
+@app.route('/docker/pull/<Name>', methods=['GET', 'POST'])
+def dockerpull(Name):
+    if request.method == 'POST':
+        global pullthread
+        if 'username' in session:
+            pullthread = Thread(target=pull_connect(Name))
+            pullthread.daemon = True
+            pullthread.start()
+            return '開始進行Pull'
+        else:
+            return redirect(url_for('main.index'))
+
+def pull_connect(Name):
+    cli = Client(base_url='unix://var/run/docker.sock')
+    for line in cli.pull(Name, stream=True):
+        socketio.emit('pull', {'info': eval(line.decode('utf-8')).get('status') + '</br>' +str(eval(line.decode('utf-8')).get('progress',''))}, namespace='/pull/info')
+    socketio.emit('pull', {'info': "[Pull-Done] 請重新整理 Hakurei-Docker 界面"}, namespace='/pull/info')

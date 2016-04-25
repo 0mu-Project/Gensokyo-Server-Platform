@@ -3,6 +3,7 @@
 {% block naviDockerClass %}active{% endblock %}
 
 {% block header %}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
 {% endblock %}
 
 {% block title %}Yakumo - Gensokyo Server Platform{% endblock %}
@@ -29,13 +30,15 @@
 		  <div class="ui middle aligned very relaxed stackable grid" style="padding: 12px 0px 0px 0px">
 			  <div class="four wide column" style="padding-right:14px;">
 				  <div class="center aligned column">
-					  <div class="ui dimage small fluid green labeled icon button">
-						  <i class="signup icon"></i>
-						  新增/部屬容器
+					  <div class="ui buttons">
+						    <button class="ui quick small blue button">HQS 部屬</button>
+							  <div class="or" data-text="/"></div>
+						    <button class="ui dimage small green button">類VMs部屬</button>
 					  </div>
 				  </div>
 				  {% include "images.html" %}
 				  {% include "containers.html" %}
+				  {% include "quickt1.html" %}
 
 			  </div>
 			  <div class="one wide column" style="padding-right:14px;">
@@ -46,6 +49,18 @@
 					    <input placeholder="直接輸入 docker 指令 (ex: docker run --name example ex:example)" type="text">
 						  <i class="circular terminal link icon"></i>
 				  </div>
+			  </div>
+			  <div class="sixteen wide column" style="">
+			  <div class="ui message">
+				  <div class = "header">
+					  關於容器部屬
+				  </div>
+				  <ul class="list">
+					  <li>HQS 部屬 : 透過 Hakurei QuickService 直接將專案部屬為容器並提供 App-Dashboard 管理. </li>
+					  <li>類VMs部屬 : 將容器部屬為類虛擬機器架構提供 SSH 界面 可提供較為進階的服務使用 就如同使用一臺 VPS. </li>
+					  <li>當然如果您知道你在做什麼您也可以直接透過 docker run 指令去命令後端幫你完成部屬</li>
+				  </ul>
+			  </div>
 			  </div>
 		  </div>
 		  </div>
@@ -128,8 +143,9 @@
 			  </table>
 </div>
 <script>
+
 $(document).ready(function(){
-$('.ui.dropdown')
+$('.ui.rimages.dropdown')
 	.dropdown({
 		action: 'select',
 		onChange : function(text, value, $selectedItem){
@@ -140,10 +156,19 @@ $('.ui.dropdown')
 		}
 	})
 ;
+$('.ui.hqsp.dropdown')
+	.dropdown()
+;
 $('.coupled.modal')
 	  .modal({
 		      allowMultiple: false
 				    })
+;
+$('.qchoose.modal')
+	.modal({
+		blurring: true
+	})
+	.modal('attach events', '.quick.button', 'show')
 ;
 $('.dimage.modal')
 	.modal({
@@ -168,5 +193,14 @@ $('#{{x.get('Names')[0].replace('/','')}}').click(function() {
 })
 {% endfor %}
 })
+$('.dpull.link.icon').click(function(){
+var data = $('#dpull').val();
+$.post("/docker/pull/" + data);
+var socket = io.connect('http://' + document.domain + ':' + location.port + '/pull/info');
+$("#uim").removeClass("hidden");
+socket.on('pull', function(msg){
+document.getElementById('pull').innerHTML = msg.info;
+})
+});
 </script>
 {% endblock %}

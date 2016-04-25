@@ -1,0 +1,69 @@
+<div class="ui large qchoose modal">
+	<div class="ui two tiny steps">
+		<div class="active step">
+			<i class="cube icon"></i>
+			<div class="content">
+				<div class="title">容器初始化</div>
+				<div class="description">選擇/輸入鏡像資訊</div>
+			</div>
+		</div>
+		<div class="step">
+			<i class="power icon"></i>
+			<div class="content">
+				<div class="title">確認容器</div>
+				<div class="description">確認設定並且啟動容器</div>
+			</div>
+		</div>
+	</div>
+	<div class="content"style="padding-top:5px;">
+		<div class="ui very relaxed stackable grid">
+			<div class="middle aligned five wide column" style="padding-right:0px; height:450px;">
+					<div style = "text-align:center;">
+						<i class="center aligned massive cubes icon"></i>
+					</div>
+					<br />
+					<div class="ui horizontal divider" style="margin-bottom:30px;">Hakurei-QS-Docker</div>
+				<div class="ui message">
+					<div class="header">關於HQS部屬</div>
+						<p>提供自動部屬專案功能，以專案為單一容器單位</p>
+						<p>專案環境目前提供:</p>
+					<ul class="list">
+						<li>python3/pypy3 : Flask, Django</li>
+						<li>PHP : 5/7/HHVM</li>
+						<li>RoR/NodeJS (LTS/Newer)/Perl/GoGS</li>
+						<li>MongoDB/MarinaDB</li>
+						</ul>
+				</div>
+			</div>
+			<div class="middle aligned one wide column" style="padding-left:14px; padding-right:14px; height:450px;">
+				<div class="ui vertical divider">HQS</div> 
+			</div>
+			<div class="ten wide column" style="padding-left:0px; height:450px;">
+				<div class="ui floating labeled icon hqsp dropdown blue fluid large button" style="text-align:center;">
+					<i class="disk outline icon"></i>
+					<span class="text">選擇專案環境</span>
+					<div class="menu">
+						<div class="ui icon search input">
+							<i class="search icon"></i>
+							<input placeholder="Search tags..." type="text">
+						</div>
+						<div class="divider"></div>
+						<div class="header">
+							<i class="disk outline icon"></i>
+							可用映像檔
+						</div>
+						<div class="scrolling menu">
+							{% for im in images %}
+							<div class="item">
+								<i class="cubes icon"></i>
+								{{im.get('RepoTags')[0]}} 
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

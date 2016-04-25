@@ -1,1 +1,518 @@
-WARNING:werkzeug: * Debugger is active!
+(3126) wsgi starting up on http://0.0.0.0:8509
+(3126) accepted ('127.0.0.1', 35490)
+127.0.0.1 - - [24/Apr/2016 04:48:28] "GET / HTTP/1.1" 200 1853 0.062374
+127.0.0.1 - - [24/Apr/2016 04:48:28] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 253 0.020239
+(3126) accepted ('127.0.0.1', 35492)
+(3126) accepted ('127.0.0.1', 35494)
+(3126) accepted ('127.0.0.1', 35496)
+127.0.0.1 - - [24/Apr/2016 04:48:28] "GET /static/main.css HTTP/1.1" 304 249 0.002859
+127.0.0.1 - - [24/Apr/2016 04:48:28] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 252 0.002552
+127.0.0.1 - - [24/Apr/2016 04:48:28] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 253 0.002963
+127.0.0.1 - - [24/Apr/2016 04:48:28] "GET /static/login.png HTTP/1.1" 304 254 0.003355
+127.0.0.1 - - [24/Apr/2016 04:48:30] "POST /login HTTP/1.1" 200 152 0.008671
+127.0.0.1 - - [24/Apr/2016 04:48:33] "GET /login HTTP/1.1" 302 387 0.006442
+127.0.0.1 - - [24/Apr/2016 04:48:33] "GET / HTTP/1.1" 200 1853 0.003573
+127.0.0.1 - - [24/Apr/2016 04:48:42] "POST /login HTTP/1.1" 302 488 0.018835
+127.0.0.1 - - [24/Apr/2016 04:48:43] "GET / HTTP/1.1" 200 4514 0.856708
+127.0.0.1 - - [24/Apr/2016 04:48:43] "GET /static/circle/css/circle.css HTTP/1.1" 304 351 0.006603
+127.0.0.1 - - [24/Apr/2016 04:48:43] "GET /socket.io/?EIO=3&transport=polling&t=1461444523968-0 HTTP/1.1" 200 381 0.001075
+127.0.0.1 - - [24/Apr/2016 04:48:44] "POST /socket.io/?EIO=3&transport=polling&t=1461444524018-1&sid=47676644a10e451dae9848295122a2cd HTTP/1.1" 200 199 0.000511
+127.0.0.1 - - [24/Apr/2016 04:48:44] "GET /socket.io/?EIO=3&transport=polling&t=1461444524037-2&sid=47676644a10e451dae9848295122a2cd HTTP/1.1" 200 222 0.000401
+(3126) accepted ('127.0.0.1', 35504)
+127.0.0.1 - - [24/Apr/2016 04:48:44] "GET /socket.io/?EIO=3&transport=polling&t=1461444524052-3&sid=47676644a10e451dae9848295122a2cd HTTP/1.1" 200 215 0.008208
+127.0.0.1 - - [24/Apr/2016 04:48:47] "GET /socket.io/?EIO=3&transport=websocket&sid=47676644a10e451dae9848295122a2cd HTTP/1.1" 200 0 2.978450
+127.0.0.1 - - [24/Apr/2016 04:48:47] "GET /docker HTTP/1.1" 200 14335 0.190458
+(3126) accepted ('127.0.0.1', 35570)
+127.0.0.1 - - [24/Apr/2016 04:53:52] "GET /docker HTTP/1.1" 200 14335 0.052375
+127.0.0.1 - - [24/Apr/2016 04:53:52] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004124
+(3126) accepted ('127.0.0.1', 35572)
+127.0.0.1 - - [24/Apr/2016 04:53:52] "GET /static/main.css HTTP/1.1" 304 350 0.004889
+(3126) accepted ('127.0.0.1', 35574)
+127.0.0.1 - - [24/Apr/2016 04:53:52] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004566
+127.0.0.1 - - [24/Apr/2016 04:53:52] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.003819
+(3126) accepted ('127.0.0.1', 35600)
+127.0.0.1 - - [24/Apr/2016 04:56:38] "GET /docker HTTP/1.1" 200 14888 0.146455
+127.0.0.1 - - [24/Apr/2016 04:56:38] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.007352
+(3126) accepted ('127.0.0.1', 35602)
+127.0.0.1 - - [24/Apr/2016 04:56:38] "GET /static/main.css HTTP/1.1" 304 350 0.006457
+127.0.0.1 - - [24/Apr/2016 04:56:38] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005651
+(3126) accepted ('127.0.0.1', 35604)
+127.0.0.1 - - [24/Apr/2016 04:56:38] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004720
+127.0.0.1 - - [24/Apr/2016 04:58:04] "GET /docker HTTP/1.1" 200 14946 0.126586
+127.0.0.1 - - [24/Apr/2016 04:58:05] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004259
+127.0.0.1 - - [24/Apr/2016 04:58:05] "GET /static/main.css HTTP/1.1" 304 350 0.004190
+127.0.0.1 - - [24/Apr/2016 04:58:05] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004946
+127.0.0.1 - - [24/Apr/2016 04:58:05] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004134
+(3126) accepted ('127.0.0.1', 35632)
+127.0.0.1 - - [24/Apr/2016 05:02:45] "GET /docker HTTP/1.1" 200 15001 0.060697
+127.0.0.1 - - [24/Apr/2016 05:02:45] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005920
+(3126) accepted ('127.0.0.1', 35634)
+127.0.0.1 - - [24/Apr/2016 05:02:45] "GET /static/main.css HTTP/1.1" 304 350 0.006040
+127.0.0.1 - - [24/Apr/2016 05:02:45] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006698
+(3126) accepted ('127.0.0.1', 35636)
+127.0.0.1 - - [24/Apr/2016 05:02:45] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004646
+127.0.0.1 - - [24/Apr/2016 05:03:27] "GET /docker HTTP/1.1" 200 15142 0.038625
+127.0.0.1 - - [24/Apr/2016 05:03:27] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004076
+127.0.0.1 - - [24/Apr/2016 05:03:27] "GET /static/main.css HTTP/1.1" 304 350 0.005707
+127.0.0.1 - - [24/Apr/2016 05:03:27] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004046
+127.0.0.1 - - [24/Apr/2016 05:03:27] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.003855
+127.0.0.1 - - [24/Apr/2016 05:04:44] "GET /docker HTTP/1.1" 200 15142 0.045987
+127.0.0.1 - - [24/Apr/2016 05:04:44] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004339
+127.0.0.1 - - [24/Apr/2016 05:04:44] "GET /static/main.css HTTP/1.1" 304 350 0.004539
+127.0.0.1 - - [24/Apr/2016 05:04:44] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004157
+127.0.0.1 - - [24/Apr/2016 05:04:44] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004717
+(3126) accepted ('127.0.0.1', 35930)
+127.0.0.1 - - [24/Apr/2016 08:17:28] "GET /docker HTTP/1.1" 200 15142 0.030451
+127.0.0.1 - - [24/Apr/2016 08:17:28] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006297
+(3126) accepted ('127.0.0.1', 35932)
+127.0.0.1 - - [24/Apr/2016 08:17:28] "GET /static/main.css HTTP/1.1" 304 350 0.006187
+127.0.0.1 - - [24/Apr/2016 08:17:28] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005943
+127.0.0.1 - - [24/Apr/2016 08:17:28] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006437
+(3126) accepted ('127.0.0.1', 36042)
+(3126) accepted ('127.0.0.1', 36268)
+127.0.0.1 - - [24/Apr/2016 08:29:32] "GET /docker HTTP/1.1" 200 15450 0.039553
+127.0.0.1 - - [24/Apr/2016 08:29:32] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004184
+(3126) accepted ('127.0.0.1', 36270)
+(3126) accepted ('127.0.0.1', 36272)
+(3126) accepted ('127.0.0.1', 36274)
+127.0.0.1 - - [24/Apr/2016 08:29:32] "GET /static/main.css HTTP/1.1" 304 350 0.004207
+127.0.0.1 - - [24/Apr/2016 08:29:32] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005631
+127.0.0.1 - - [24/Apr/2016 08:29:32] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004078
+(3126) accepted ('127.0.0.1', 36406)
+127.0.0.1 - - [24/Apr/2016 08:32:39] "GET /docker HTTP/1.1" 200 15341 0.037622
+127.0.0.1 - - [24/Apr/2016 08:32:39] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006881
+(3126) accepted ('127.0.0.1', 36408)
+127.0.0.1 - - [24/Apr/2016 08:32:39] "GET /static/main.css HTTP/1.1" 304 350 0.006871
+127.0.0.1 - - [24/Apr/2016 08:32:39] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006187
+(3126) accepted ('127.0.0.1', 36410)
+127.0.0.1 - - [24/Apr/2016 08:32:39] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006032
+127.0.0.1 - - [24/Apr/2016 08:33:11] "GET /docker HTTP/1.1" 200 15326 0.064207
+127.0.0.1 - - [24/Apr/2016 08:33:11] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004169
+127.0.0.1 - - [24/Apr/2016 08:33:11] "GET /static/main.css HTTP/1.1" 304 350 0.006664
+127.0.0.1 - - [24/Apr/2016 08:33:11] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006631
+127.0.0.1 - - [24/Apr/2016 08:33:11] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006581
+127.0.0.1 - - [24/Apr/2016 08:33:20] "GET /docker HTTP/1.1" 200 15313 0.046769
+127.0.0.1 - - [24/Apr/2016 08:33:20] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004346
+127.0.0.1 - - [24/Apr/2016 08:33:20] "GET /static/main.css HTTP/1.1" 304 350 0.004611
+127.0.0.1 - - [24/Apr/2016 08:33:20] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004264
+127.0.0.1 - - [24/Apr/2016 08:33:20] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004486
+127.0.0.1 - - [24/Apr/2016 08:34:43] "GET /docker HTTP/1.1" 200 15405 0.038228
+127.0.0.1 - - [24/Apr/2016 08:34:43] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004018
+127.0.0.1 - - [24/Apr/2016 08:34:43] "GET /static/main.css HTTP/1.1" 304 350 0.005084
+127.0.0.1 - - [24/Apr/2016 08:34:43] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004016
+127.0.0.1 - - [24/Apr/2016 08:34:43] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004279
+127.0.0.1 - - [24/Apr/2016 08:35:15] "GET /docker HTTP/1.1" 200 15434 0.061766
+127.0.0.1 - - [24/Apr/2016 08:35:15] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004343
+127.0.0.1 - - [24/Apr/2016 08:35:15] "GET /static/main.css HTTP/1.1" 304 350 0.004357
+127.0.0.1 - - [24/Apr/2016 08:35:15] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004733
+127.0.0.1 - - [24/Apr/2016 08:35:15] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004210
+127.0.0.1 - - [24/Apr/2016 08:35:58] "GET /docker HTTP/1.1" 200 15476 0.040884
+127.0.0.1 - - [24/Apr/2016 08:35:58] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004919
+127.0.0.1 - - [24/Apr/2016 08:35:58] "GET /static/main.css HTTP/1.1" 304 350 0.006787
+127.0.0.1 - - [24/Apr/2016 08:35:58] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006470
+127.0.0.1 - - [24/Apr/2016 08:35:58] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005882
+(3126) accepted ('127.0.0.1', 36452)
+127.0.0.1 - - [24/Apr/2016 08:39:20] "GET /docker HTTP/1.1" 200 15534 0.034498
+127.0.0.1 - - [24/Apr/2016 08:39:20] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005303
+127.0.0.1 - - [24/Apr/2016 08:39:20] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006397
+(3126) accepted ('127.0.0.1', 36454)
+(3126) accepted ('127.0.0.1', 36456)
+127.0.0.1 - - [24/Apr/2016 08:39:20] "GET /static/main.css HTTP/1.1" 304 350 0.004578
+127.0.0.1 - - [24/Apr/2016 08:39:20] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004608
+127.0.0.1 - - [24/Apr/2016 08:40:02] "GET /docker HTTP/1.1" 200 15540 0.046709
+127.0.0.1 - - [24/Apr/2016 08:40:02] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003978
+127.0.0.1 - - [24/Apr/2016 08:40:02] "GET /static/main.css HTTP/1.1" 304 350 0.004357
+127.0.0.1 - - [24/Apr/2016 08:40:02] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005239
+127.0.0.1 - - [24/Apr/2016 08:40:02] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004300
+127.0.0.1 - - [24/Apr/2016 08:40:13] "GET /docker HTTP/1.1" 200 15552 0.045797
+127.0.0.1 - - [24/Apr/2016 08:40:13] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004989
+127.0.0.1 - - [24/Apr/2016 08:40:13] "GET /static/main.css HTTP/1.1" 304 350 0.004435
+127.0.0.1 - - [24/Apr/2016 08:40:13] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004554
+127.0.0.1 - - [24/Apr/2016 08:40:13] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004376
+127.0.0.1 - - [24/Apr/2016 08:40:21] "GET /docker HTTP/1.1" 200 15690 0.058153
+127.0.0.1 - - [24/Apr/2016 08:40:21] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006135
+127.0.0.1 - - [24/Apr/2016 08:40:21] "GET /static/main.css HTTP/1.1" 304 350 0.006437
+127.0.0.1 - - [24/Apr/2016 08:40:21] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006024
+127.0.0.1 - - [24/Apr/2016 08:40:21] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006886
+127.0.0.1 - - [24/Apr/2016 08:40:49] "GET /docker HTTP/1.1" 200 15546 0.044499
+127.0.0.1 - - [24/Apr/2016 08:40:49] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004689
+127.0.0.1 - - [24/Apr/2016 08:40:49] "GET /static/main.css HTTP/1.1" 304 350 0.004767
+127.0.0.1 - - [24/Apr/2016 08:40:49] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004937
+127.0.0.1 - - [24/Apr/2016 08:40:49] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004389
+127.0.0.1 - - [24/Apr/2016 08:41:19] "GET /docker HTTP/1.1" 200 15503 0.059096
+127.0.0.1 - - [24/Apr/2016 08:41:19] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006075
+127.0.0.1 - - [24/Apr/2016 08:41:19] "GET /static/main.css HTTP/1.1" 304 350 0.006229
+127.0.0.1 - - [24/Apr/2016 08:41:19] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006320
+127.0.0.1 - - [24/Apr/2016 08:41:19] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006021
+127.0.0.1 - - [24/Apr/2016 08:41:38] "GET /docker HTTP/1.1" 200 15489 0.037348
+127.0.0.1 - - [24/Apr/2016 08:41:38] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004235
+127.0.0.1 - - [24/Apr/2016 08:41:38] "GET /static/main.css HTTP/1.1" 304 350 0.005420
+127.0.0.1 - - [24/Apr/2016 08:41:38] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004374
+127.0.0.1 - - [24/Apr/2016 08:41:38] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006856
+127.0.0.1 - - [24/Apr/2016 08:42:15] "GET /docker HTTP/1.1" 200 15504 0.045432
+127.0.0.1 - - [24/Apr/2016 08:42:15] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004362
+127.0.0.1 - - [24/Apr/2016 08:42:15] "GET /static/main.css HTTP/1.1" 304 350 0.006390
+127.0.0.1 - - [24/Apr/2016 08:42:15] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006299
+127.0.0.1 - - [24/Apr/2016 08:42:15] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006297
+127.0.0.1 - - [24/Apr/2016 08:42:30] "GET /docker HTTP/1.1" 200 15489 0.036782
+127.0.0.1 - - [24/Apr/2016 08:42:30] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004110
+127.0.0.1 - - [24/Apr/2016 08:42:30] "GET /static/main.css HTTP/1.1" 304 350 0.006316
+127.0.0.1 - - [24/Apr/2016 08:42:30] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005957
+127.0.0.1 - - [24/Apr/2016 08:42:30] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005426
+127.0.0.1 - - [24/Apr/2016 08:43:08] "GET /docker HTTP/1.1" 200 15625 0.048406
+127.0.0.1 - - [24/Apr/2016 08:43:08] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004325
+127.0.0.1 - - [24/Apr/2016 08:43:08] "GET /static/main.css HTTP/1.1" 304 350 0.006204
+127.0.0.1 - - [24/Apr/2016 08:43:08] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006361
+127.0.0.1 - - [24/Apr/2016 08:43:08] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006261
+127.0.0.1 - - [24/Apr/2016 08:43:24] "GET /docker HTTP/1.1" 200 15623 0.038093
+127.0.0.1 - - [24/Apr/2016 08:43:24] "GET /static/main.css HTTP/1.1" 304 350 0.004191
+127.0.0.1 - - [24/Apr/2016 08:43:24] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005097
+127.0.0.1 - - [24/Apr/2016 08:43:24] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005607
+(3126) accepted ('127.0.0.1', 36470)
+127.0.0.1 - - [24/Apr/2016 08:43:24] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005545
+127.0.0.1 - - [24/Apr/2016 08:44:09] "GET /docker HTTP/1.1" 200 15616 0.055038
+127.0.0.1 - - [24/Apr/2016 08:44:09] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004530
+127.0.0.1 - - [24/Apr/2016 08:44:09] "GET /static/main.css HTTP/1.1" 304 350 0.006877
+127.0.0.1 - - [24/Apr/2016 08:44:09] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006570
+127.0.0.1 - - [24/Apr/2016 08:44:09] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006821
+127.0.0.1 - - [24/Apr/2016 08:44:37] "GET /docker HTTP/1.1" 200 15620 0.039562
+127.0.0.1 - - [24/Apr/2016 08:44:37] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004166
+127.0.0.1 - - [24/Apr/2016 08:44:37] "GET /static/main.css HTTP/1.1" 304 350 0.004394
+127.0.0.1 - - [24/Apr/2016 08:44:37] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004596
+127.0.0.1 - - [24/Apr/2016 08:44:37] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004158
+127.0.0.1 - - [24/Apr/2016 08:45:04] "GET /docker HTTP/1.1" 200 15655 0.056346
+127.0.0.1 - - [24/Apr/2016 08:45:04] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004766
+127.0.0.1 - - [24/Apr/2016 08:45:04] "GET /static/main.css HTTP/1.1" 304 350 0.004717
+127.0.0.1 - - [24/Apr/2016 08:45:04] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005065
+127.0.0.1 - - [24/Apr/2016 08:45:04] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004527
+127.0.0.1 - - [24/Apr/2016 08:45:11] "GET /docker HTTP/1.1" 200 15656 0.050879
+127.0.0.1 - - [24/Apr/2016 08:45:11] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004609
+127.0.0.1 - - [24/Apr/2016 08:45:11] "GET /static/main.css HTTP/1.1" 304 350 0.005366
+127.0.0.1 - - [24/Apr/2016 08:45:11] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004945
+127.0.0.1 - - [24/Apr/2016 08:45:11] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004979
+127.0.0.1 - - [24/Apr/2016 08:45:37] "GET /docker HTTP/1.1" 200 15647 0.032667
+127.0.0.1 - - [24/Apr/2016 08:45:37] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004487
+127.0.0.1 - - [24/Apr/2016 08:45:37] "GET /static/main.css HTTP/1.1" 304 350 0.004377
+127.0.0.1 - - [24/Apr/2016 08:45:37] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004100
+127.0.0.1 - - [24/Apr/2016 08:45:37] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.003843
+127.0.0.1 - - [24/Apr/2016 08:46:00] "GET /docker HTTP/1.1" 200 15658 0.036677
+127.0.0.1 - - [24/Apr/2016 08:46:00] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003999
+127.0.0.1 - - [24/Apr/2016 08:46:00] "GET /static/main.css HTTP/1.1" 304 350 0.004530
+127.0.0.1 - - [24/Apr/2016 08:46:00] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006393
+127.0.0.1 - - [24/Apr/2016 08:46:00] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.003846
+127.0.0.1 - - [24/Apr/2016 08:46:15] "GET /docker HTTP/1.1" 200 15670 0.047295
+127.0.0.1 - - [24/Apr/2016 08:46:15] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004920
+127.0.0.1 - - [24/Apr/2016 08:46:15] "GET /static/main.css HTTP/1.1" 304 350 0.004389
+127.0.0.1 - - [24/Apr/2016 08:46:15] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004696
+127.0.0.1 - - [24/Apr/2016 08:46:15] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004507
+127.0.0.1 - - [24/Apr/2016 08:46:22] "GET /docker HTTP/1.1" 200 15682 0.074619
+127.0.0.1 - - [24/Apr/2016 08:46:22] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004894
+127.0.0.1 - - [24/Apr/2016 08:46:22] "GET /static/main.css HTTP/1.1" 304 350 0.005357
+127.0.0.1 - - [24/Apr/2016 08:46:22] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004999
+127.0.0.1 - - [24/Apr/2016 08:46:22] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005875
+127.0.0.1 - - [24/Apr/2016 08:46:31] "GET /docker HTTP/1.1" 200 15670 0.069868
+127.0.0.1 - - [24/Apr/2016 08:46:31] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006883
+127.0.0.1 - - [24/Apr/2016 08:46:31] "GET /static/main.css HTTP/1.1" 304 350 0.006388
+127.0.0.1 - - [24/Apr/2016 08:46:31] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.008772
+127.0.0.1 - - [24/Apr/2016 08:46:31] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.012991
+127.0.0.1 - - [24/Apr/2016 08:46:55] "GET /docker HTTP/1.1" 200 15698 0.040103
+127.0.0.1 - - [24/Apr/2016 08:46:55] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004548
+127.0.0.1 - - [24/Apr/2016 08:46:55] "GET /static/main.css HTTP/1.1" 304 350 0.004333
+127.0.0.1 - - [24/Apr/2016 08:46:55] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005144
+127.0.0.1 - - [24/Apr/2016 08:46:55] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004429
+127.0.0.1 - - [24/Apr/2016 08:47:23] "GET /docker HTTP/1.1" 200 15698 0.048581
+127.0.0.1 - - [24/Apr/2016 08:47:23] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005631
+127.0.0.1 - - [24/Apr/2016 08:47:23] "GET /static/main.css HTTP/1.1" 304 350 0.005986
+127.0.0.1 - - [24/Apr/2016 08:47:23] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005554
+127.0.0.1 - - [24/Apr/2016 08:47:23] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005664
+127.0.0.1 - - [24/Apr/2016 08:47:37] "GET /docker HTTP/1.1" 200 15698 0.047424
+127.0.0.1 - - [24/Apr/2016 08:47:37] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004046
+127.0.0.1 - - [24/Apr/2016 08:47:37] "GET /static/main.css HTTP/1.1" 304 350 0.004952
+127.0.0.1 - - [24/Apr/2016 08:47:37] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004305
+127.0.0.1 - - [24/Apr/2016 08:47:37] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004251
+127.0.0.1 - - [24/Apr/2016 08:48:13] "GET /docker HTTP/1.1" 200 15701 0.043911
+127.0.0.1 - - [24/Apr/2016 08:48:13] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006113
+127.0.0.1 - - [24/Apr/2016 08:48:13] "GET /static/main.css HTTP/1.1" 304 350 0.006100
+127.0.0.1 - - [24/Apr/2016 08:48:13] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005676
+127.0.0.1 - - [24/Apr/2016 08:48:13] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005998
+127.0.0.1 - - [24/Apr/2016 08:48:45] "GET /docker HTTP/1.1" 200 15716 0.039536
+127.0.0.1 - - [24/Apr/2016 08:48:45] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005245
+127.0.0.1 - - [24/Apr/2016 08:48:45] "GET /static/main.css HTTP/1.1" 304 350 0.004570
+127.0.0.1 - - [24/Apr/2016 08:48:45] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005241
+127.0.0.1 - - [24/Apr/2016 08:48:45] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004188
+127.0.0.1 - - [24/Apr/2016 08:49:56] "GET /docker HTTP/1.1" 200 15755 0.041207
+127.0.0.1 - - [24/Apr/2016 08:49:56] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005994
+127.0.0.1 - - [24/Apr/2016 08:49:56] "GET /static/main.css HTTP/1.1" 304 350 0.004051
+127.0.0.1 - - [24/Apr/2016 08:49:56] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.004987
+127.0.0.1 - - [24/Apr/2016 08:49:56] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004804
+(3126) accepted ('127.0.0.1', 36562)
+127.0.0.1 - - [24/Apr/2016 08:52:57] "GET /docker HTTP/1.1" 200 15787 0.038029
+127.0.0.1 - - [24/Apr/2016 08:52:57] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006348
+(3126) accepted ('127.0.0.1', 36564)
+127.0.0.1 - - [24/Apr/2016 08:52:57] "GET /static/main.css HTTP/1.1" 304 350 0.006416
+127.0.0.1 - - [24/Apr/2016 08:52:57] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005822
+(3126) accepted ('127.0.0.1', 36566)
+127.0.0.1 - - [24/Apr/2016 08:52:57] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006136
+127.0.0.1 - - [24/Apr/2016 08:53:05] "GET /docker HTTP/1.1" 200 15748 0.049427
+127.0.0.1 - - [24/Apr/2016 08:53:05] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004036
+127.0.0.1 - - [24/Apr/2016 08:53:05] "GET /static/main.css HTTP/1.1" 304 350 0.006100
+127.0.0.1 - - [24/Apr/2016 08:53:05] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.003926
+127.0.0.1 - - [24/Apr/2016 08:53:05] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.003925
+(3126) accepted ('127.0.0.1', 36820)
+(3126) accepted ('127.0.0.1', 37032)
+(3126) accepted ('127.0.0.1', 37034)
+127.0.0.1 - - [24/Apr/2016 11:13:39] "GET /docker HTTP/1.1" 200 15748 0.033050
+127.0.0.1 - - [24/Apr/2016 11:13:39] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006204
+(3126) accepted ('127.0.0.1', 37038)
+(3126) accepted ('127.0.0.1', 37040)
+(3126) accepted ('127.0.0.1', 37042)
+127.0.0.1 - - [24/Apr/2016 11:13:39] "GET /static/main.css HTTP/1.1" 304 350 0.005634
+127.0.0.1 - - [24/Apr/2016 11:13:39] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005786
+127.0.0.1 - - [24/Apr/2016 11:13:39] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005799
+127.0.0.1 - - [24/Apr/2016 11:15:13] "GET /docker HTTP/1.1" 200 15751 0.110719
+127.0.0.1 - - [24/Apr/2016 11:15:14] "GET /static/main.css HTTP/1.1" 304 350 0.004486
+127.0.0.1 - - [24/Apr/2016 11:15:14] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005570
+127.0.0.1 - - [24/Apr/2016 11:15:14] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005995
+127.0.0.1 - - [24/Apr/2016 11:15:14] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005943
+127.0.0.1 - - [24/Apr/2016 11:15:28] "GET /docker HTTP/1.1" 200 15746 0.162997
+127.0.0.1 - - [24/Apr/2016 11:15:28] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006488
+127.0.0.1 - - [24/Apr/2016 11:15:28] "GET /static/main.css HTTP/1.1" 304 350 0.005739
+127.0.0.1 - - [24/Apr/2016 11:15:28] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006190
+127.0.0.1 - - [24/Apr/2016 11:15:28] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005726
+127.0.0.1 - - [24/Apr/2016 11:16:51] "GET /docker HTTP/1.1" 200 15848 0.146862
+127.0.0.1 - - [24/Apr/2016 11:16:51] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006158
+127.0.0.1 - - [24/Apr/2016 11:16:51] "GET /static/main.css HTTP/1.1" 304 350 0.005643
+127.0.0.1 - - [24/Apr/2016 11:16:51] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006571
+127.0.0.1 - - [24/Apr/2016 11:16:51] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005964
+127.0.0.1 - - [24/Apr/2016 11:17:34] "GET /docker HTTP/1.1" 200 15916 0.116191
+127.0.0.1 - - [24/Apr/2016 11:17:34] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003808
+127.0.0.1 - - [24/Apr/2016 11:17:34] "GET /static/main.css HTTP/1.1" 304 350 0.003991
+127.0.0.1 - - [24/Apr/2016 11:17:34] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005469
+127.0.0.1 - - [24/Apr/2016 11:17:34] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.003800
+(3126) accepted ('127.0.0.1', 37086)
+127.0.0.1 - - [24/Apr/2016 11:20:43] "GET /docker HTTP/1.1" 200 16071 0.124910
+127.0.0.1 - - [24/Apr/2016 11:20:44] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005861
+127.0.0.1 - - [24/Apr/2016 11:20:44] "GET /static/main.css HTTP/1.1" 304 350 0.005895
+(3126) accepted ('127.0.0.1', 37088)
+(3126) accepted ('127.0.0.1', 37090)
+(3126) accepted ('127.0.0.1', 37092)
+127.0.0.1 - - [24/Apr/2016 11:20:44] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.007202
+127.0.0.1 - - [24/Apr/2016 11:20:44] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006082
+127.0.0.1 - - [24/Apr/2016 11:20:45] "GET /docker HTTP/1.1" 200 16071 0.039387
+127.0.0.1 - - [24/Apr/2016 11:20:45] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004318
+127.0.0.1 - - [24/Apr/2016 11:20:45] "GET /static/main.css HTTP/1.1" 304 350 0.004568
+127.0.0.1 - - [24/Apr/2016 11:20:45] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006392
+127.0.0.1 - - [24/Apr/2016 11:20:45] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006466
+127.0.0.1 - - [24/Apr/2016 11:22:39] "GET /docker HTTP/1.1" 200 16224 0.113874
+127.0.0.1 - - [24/Apr/2016 11:22:39] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004503
+127.0.0.1 - - [24/Apr/2016 11:22:39] "GET /static/main.css HTTP/1.1" 304 350 0.004229
+127.0.0.1 - - [24/Apr/2016 11:22:40] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004682
+127.0.0.1 - - [24/Apr/2016 11:22:40] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006251
+127.0.0.1 - - [24/Apr/2016 11:22:52] "GET /docker HTTP/1.1" 200 16225 0.127709
+127.0.0.1 - - [24/Apr/2016 11:22:52] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003780
+127.0.0.1 - - [24/Apr/2016 11:22:52] "GET /static/main.css HTTP/1.1" 304 350 0.006144
+127.0.0.1 - - [24/Apr/2016 11:22:52] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005827
+127.0.0.1 - - [24/Apr/2016 11:22:52] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006024
+127.0.0.1 - - [24/Apr/2016 11:23:42] "GET /docker HTTP/1.1" 200 16353 0.121986
+127.0.0.1 - - [24/Apr/2016 11:23:42] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003721
+127.0.0.1 - - [24/Apr/2016 11:23:42] "GET /static/main.css HTTP/1.1" 304 350 0.004401
+127.0.0.1 - - [24/Apr/2016 11:23:42] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.004958
+127.0.0.1 - - [24/Apr/2016 11:23:42] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.003637
+(3126) accepted ('127.0.0.1', 37116)
+(3126) accepted ('127.0.0.1', 37122)
+(3126) accepted ('127.0.0.1', 37124)
+(3126) accepted ('127.0.0.1', 37130)
+(3126) accepted ('127.0.0.1', 37134)
+127.0.0.1 - - [24/Apr/2016 11:36:14] "GET / HTTP/1.1" 200 4514 0.133050
+(3126) accepted ('127.0.0.1', 37140)
+127.0.0.1 - - [24/Apr/2016 11:36:14] "GET /socket.io/?EIO=3&transport=polling&t=1461468974523-0 HTTP/1.1" 200 381 0.000736
+(3126) accepted ('127.0.0.1', 37142)
+127.0.0.1 - - [24/Apr/2016 11:36:15] "POST /socket.io/?EIO=3&transport=polling&t=1461468974985-1&sid=c600ac31237e49928df438932f1b4dbf HTTP/1.1" 200 199 0.000447
+127.0.0.1 - - [24/Apr/2016 11:36:15] "GET /socket.io/?EIO=3&transport=polling&t=1461468974994-2&sid=c600ac31237e49928df438932f1b4dbf HTTP/1.1" 200 222 0.003356
+127.0.0.1 - - [24/Apr/2016 11:36:15] "GET /socket.io/?EIO=3&transport=polling&t=1461468975009-3&sid=c600ac31237e49928df438932f1b4dbf HTTP/1.1" 200 215 0.004633
+127.0.0.1 - - [24/Apr/2016 11:36:30] "GET /socket.io/?EIO=3&transport=websocket&sid=c600ac31237e49928df438932f1b4dbf HTTP/1.1" 200 0 15.315017
+127.0.0.1 - - [24/Apr/2016 11:36:30] "GET / HTTP/1.1" 200 4514 0.124112
+127.0.0.1 - - [24/Apr/2016 11:36:30] "GET /socket.io/?EIO=3&transport=polling&t=1461468990699-0 HTTP/1.1" 200 381 0.000921
+127.0.0.1 - - [24/Apr/2016 11:36:30] "POST /socket.io/?EIO=3&transport=polling&t=1461468990753-1&sid=782e6fbbfde1417cb3fbf703f71954ea HTTP/1.1" 200 199 0.000584
+127.0.0.1 - - [24/Apr/2016 11:36:30] "GET /socket.io/?EIO=3&transport=polling&t=1461468990771-2&sid=782e6fbbfde1417cb3fbf703f71954ea HTTP/1.1" 200 222 0.000708
+(3126) accepted ('127.0.0.1', 37146)
+127.0.0.1 - - [24/Apr/2016 11:36:31] "GET /socket.io/?EIO=3&transport=polling&t=1461468990802-3&sid=782e6fbbfde1417cb3fbf703f71954ea HTTP/1.1" 200 334 0.855479
+127.0.0.1 - - [24/Apr/2016 11:36:31] "GET /socket.io/?EIO=3&transport=websocket&sid=782e6fbbfde1417cb3fbf703f71954ea HTTP/1.1" 200 0 0.000401
+127.0.0.1 - - [24/Apr/2016 11:36:31] "GET /docker HTTP/1.1" 200 16353 0.066415
+127.0.0.1 - - [24/Apr/2016 11:52:18] "GET /docker HTTP/1.1" 200 16353 0.043542
+127.0.0.1 - - [24/Apr/2016 11:52:18] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006163
+(3126) accepted ('127.0.0.1', 37150)
+127.0.0.1 - - [24/Apr/2016 11:52:18] "GET /static/main.css HTTP/1.1" 304 350 0.006628
+(3126) accepted ('127.0.0.1', 37152)
+(3126) accepted ('127.0.0.1', 37154)
+(3126) accepted ('127.0.0.1', 37156)
+127.0.0.1 - - [24/Apr/2016 11:52:18] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006462
+127.0.0.1 - - [24/Apr/2016 11:52:18] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005932
+127.0.0.1 - - [24/Apr/2016 11:52:54] "GET /docker HTTP/1.1" 200 16350 0.055875
+127.0.0.1 - - [24/Apr/2016 11:52:54] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003759
+127.0.0.1 - - [24/Apr/2016 11:52:54] "GET /static/main.css HTTP/1.1" 304 350 0.006622
+127.0.0.1 - - [24/Apr/2016 11:52:54] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005782
+127.0.0.1 - - [24/Apr/2016 11:52:54] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005660
+(3126) accepted ('127.0.0.1', 37326)
+127.0.0.1 - - [24/Apr/2016 11:57:09] "GET /docker HTTP/1.1" 200 16518 0.058116
+127.0.0.1 - - [24/Apr/2016 11:57:09] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005676
+(3126) accepted ('127.0.0.1', 37328)
+127.0.0.1 - - [24/Apr/2016 11:57:09] "GET /static/main.css HTTP/1.1" 304 350 0.005828
+(3126) accepted ('127.0.0.1', 37330)
+(3126) accepted ('127.0.0.1', 37332)
+(3126) accepted ('127.0.0.1', 37334)
+127.0.0.1 - - [24/Apr/2016 11:57:09] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005933
+127.0.0.1 - - [24/Apr/2016 11:57:09] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006172
+127.0.0.1 - - [24/Apr/2016 11:57:38] "GET /docker HTTP/1.1" 200 16517 0.043348
+127.0.0.1 - - [24/Apr/2016 11:57:38] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004173
+127.0.0.1 - - [24/Apr/2016 11:57:38] "GET /static/main.css HTTP/1.1" 304 350 0.006825
+127.0.0.1 - - [24/Apr/2016 11:57:38] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005646
+127.0.0.1 - - [24/Apr/2016 11:57:38] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005759
+127.0.0.1 - - [24/Apr/2016 11:58:17] "GET /docker HTTP/1.1" 200 16534 0.041746
+127.0.0.1 - - [24/Apr/2016 11:58:17] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.006009
+127.0.0.1 - - [24/Apr/2016 11:58:17] "GET /static/main.css HTTP/1.1" 304 350 0.005965
+127.0.0.1 - - [24/Apr/2016 11:58:17] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006133
+127.0.0.1 - - [24/Apr/2016 11:58:17] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006770
+(3126) accepted ('127.0.0.1', 37574)
+127.0.0.1 - - [24/Apr/2016 13:02:38] "GET /docker HTTP/1.1" 200 19031 0.064125
+127.0.0.1 - - [24/Apr/2016 13:02:39] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003344
+(3126) accepted ('127.0.0.1', 37578)
+(3126) accepted ('127.0.0.1', 37580)
+(3126) accepted ('127.0.0.1', 37582)
+127.0.0.1 - - [24/Apr/2016 13:02:39] "GET /static/main.css HTTP/1.1" 304 350 0.003503
+127.0.0.1 - - [24/Apr/2016 13:02:39] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.003333
+127.0.0.1 - - [24/Apr/2016 13:02:39] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.003540
+127.0.0.1 - - [24/Apr/2016 13:03:27] "GET /docker HTTP/1.1" 200 19028 0.051035
+127.0.0.1 - - [24/Apr/2016 13:03:27] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004407
+127.0.0.1 - - [24/Apr/2016 13:03:27] "GET /static/main.css HTTP/1.1" 304 350 0.005666
+127.0.0.1 - - [24/Apr/2016 13:03:27] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005579
+127.0.0.1 - - [24/Apr/2016 13:03:27] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005965
+127.0.0.1 - - [24/Apr/2016 13:04:49] "GET /docker HTTP/1.1" 200 19043 0.157184
+127.0.0.1 - - [24/Apr/2016 13:04:49] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003945
+127.0.0.1 - - [24/Apr/2016 13:04:49] "GET /static/main.css HTTP/1.1" 304 350 0.005922
+127.0.0.1 - - [24/Apr/2016 13:04:49] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006038
+127.0.0.1 - - [24/Apr/2016 13:04:49] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005002
+127.0.0.1 - - [24/Apr/2016 13:05:03] "GET /docker HTTP/1.1" 200 19043 0.034281
+127.0.0.1 - - [24/Apr/2016 13:05:03] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.003939
+127.0.0.1 - - [24/Apr/2016 13:05:03] "GET /static/main.css HTTP/1.1" 304 350 0.004105
+127.0.0.1 - - [24/Apr/2016 13:05:03] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.003993
+127.0.0.1 - - [24/Apr/2016 13:05:03] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.006180
+(3126) accepted ('127.0.0.1', 37606)
+(3126) accepted ('127.0.0.1', 37608)
+Traceback (most recent call last):
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 506, in handle_one_response
+    write(b''.join(towrite))
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 452, in write
+    wfile.writelines(towrite)
+  File "/opt/pypy3/lib-python/3/socket.py", line 308, in write
+    return self._sock.send(b)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 379, in send
+    return self._send_loop(self.fd.send, data, flags)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 366, in _send_loop
+    return send_method(data, *args)
+_socket.error: [Errno 32] Broken pipe
+
+127.0.0.1 - - [24/Apr/2016 13:05:03] "GET /docker HTTP/1.1" 200 0 0.052476
+(3126) accepted ('127.0.0.1', 37610)
+Traceback (most recent call last):
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 506, in handle_one_response
+    write(b''.join(towrite))
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 452, in write
+    wfile.writelines(towrite)
+  File "/opt/pypy3/lib-python/3/socket.py", line 308, in write
+    return self._sock.send(b)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 379, in send
+    return self._send_loop(self.fd.send, data, flags)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 366, in _send_loop
+    return send_method(data, *args)
+_socket.error: [Errno 32] Broken pipe
+
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /docker HTTP/1.1" 200 0 0.067394
+Traceback (most recent call last):
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 506, in handle_one_response
+    write(b''.join(towrite))
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 452, in write
+    wfile.writelines(towrite)
+  File "/opt/pypy3/lib-python/3/socket.py", line 308, in write
+    return self._sock.send(b)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 379, in send
+    return self._send_loop(self.fd.send, data, flags)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 366, in _send_loop
+    return send_method(data, *args)
+_socket.error: [Errno 32] Broken pipe
+
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /docker HTTP/1.1" 200 0 0.076287
+Traceback (most recent call last):
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 506, in handle_one_response
+    write(b''.join(towrite))
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 452, in write
+    wfile.writelines(towrite)
+  File "/opt/pypy3/lib-python/3/socket.py", line 308, in write
+    return self._sock.send(b)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 379, in send
+    return self._send_loop(self.fd.send, data, flags)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 366, in _send_loop
+    return send_method(data, *args)
+_socket.error: [Errno 32] Broken pipe
+
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /docker HTTP/1.1" 200 0 0.111385
+Traceback (most recent call last):
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 506, in handle_one_response
+    write(b''.join(towrite))
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 452, in write
+    wfile.writelines(towrite)
+  File "/opt/pypy3/lib-python/3/socket.py", line 308, in write
+    return self._sock.send(b)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 379, in send
+    return self._send_loop(self.fd.send, data, flags)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 366, in _send_loop
+    return send_method(data, *args)
+_socket.error: [Errno 32] Broken pipe
+
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /docker HTTP/1.1" 200 0 0.081332
+(3126) accepted ('127.0.0.1', 37612)
+(3126) accepted ('127.0.0.1', 37614)
+Traceback (most recent call last):
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 506, in handle_one_response
+    write(b''.join(towrite))
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 452, in write
+    wfile.writelines(towrite)
+  File "/opt/pypy3/lib-python/3/socket.py", line 308, in write
+    return self._sock.send(b)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 379, in send
+    return self._send_loop(self.fd.send, data, flags)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 366, in _send_loop
+    return send_method(data, *args)
+_socket.error: [Errno 32] Broken pipe
+
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /docker HTTP/1.1" 200 0 0.081999
+Traceback (most recent call last):
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 506, in handle_one_response
+    write(b''.join(towrite))
+  File "/opt/pypy3/site-packages/eventlet/wsgi.py", line 452, in write
+    wfile.writelines(towrite)
+  File "/opt/pypy3/lib-python/3/socket.py", line 308, in write
+    return self._sock.send(b)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 379, in send
+    return self._send_loop(self.fd.send, data, flags)
+  File "/opt/pypy3/site-packages/eventlet/greenio/base.py", line 366, in _send_loop
+    return send_method(data, *args)
+_socket.error: [Errno 32] Broken pipe
+
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /docker HTTP/1.1" 200 0 0.087846
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /docker HTTP/1.1" 200 19043 0.087686
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.005567
+(3126) accepted ('127.0.0.1', 37616)
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /static/main.css HTTP/1.1" 304 350 0.005950
+(3126) accepted ('127.0.0.1', 37618)
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006743
+127.0.0.1 - - [24/Apr/2016 13:05:04] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.005878
+127.0.0.1 - - [24/Apr/2016 13:05:21] "GET /docker HTTP/1.1" 200 19044 0.107246
+127.0.0.1 - - [24/Apr/2016 13:05:21] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004479
+127.0.0.1 - - [24/Apr/2016 13:05:21] "GET /static/main.css HTTP/1.1" 304 350 0.006806
+127.0.0.1 - - [24/Apr/2016 13:05:21] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.006363
+127.0.0.1 - - [24/Apr/2016 13:05:21] "GET /static/semantic-ui/semantic.min.js HTTP/1.1" 304 354 0.007024
+127.0.0.1 - - [24/Apr/2016 13:07:03] "GET /docker HTTP/1.1" 200 19087 0.142087
+127.0.0.1 - - [24/Apr/2016 13:07:03] "GET /static/semantic-ui/semantic.min.css HTTP/1.1" 304 354 0.004929
+127.0.0.1 - - [24/Apr/2016 13:07:03] "GET /static/main.css HTTP/1.1" 304 350 0.006078
+127.0.0.1 - - [24/Apr/2016 13:07:03] "GET /static/jquery-2.2.2.min.js HTTP/1.1" 304 353 0.005626

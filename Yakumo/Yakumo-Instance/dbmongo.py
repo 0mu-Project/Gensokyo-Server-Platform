@@ -16,8 +16,10 @@ class User:
         print(user.insert_one(raw).inserted_id)
 
     def login(username):
-        user = db['Users']
-        usern = user.find_one({"user": username})
-        return usern['password'] 
-
-
+        try:
+            user = db['Users']
+            usern = user.find_one({"user": username})
+            password = usern['password'] 
+        except:
+            password = False
+        return password

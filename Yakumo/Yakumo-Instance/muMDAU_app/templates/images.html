@@ -32,7 +32,7 @@
 	<div class="content"style="padding-top:5px;">
 		<div class="ui very relaxed stackable grid">
 			<div class="five wide column" style="padding-right:0px; height:450px;">
-				<div class="ui floating labeled icon dropdown blue fluid large button" style="text-align:center;">
+				<div class="ui floating labeled icon dropdown blue fluid rimages large button" style="text-align:center;">
 					<i class="disk outline icon"></i>
 					<span class="text">選擇存在的映像</span>
 					<div class="menu">
@@ -69,27 +69,31 @@
 				<br />
 				<div class="ui horizontal divider">Docker Hub</div>
 				<div class="ui icon fluid large input">
-					<input placeholder="請輸入你要pull的鏡像 ..." type="text">
-					<i class="circular terminal link icon"></i>
+					<input id = "dpull" placeholder="請輸入你要pull的鏡像 ..." type="text">
+					<i class="circular terminal dpull link icon"></i>
 				</div>
 			</div>
-			<div class="middle aligned one wide column" style="padding-left:14px; padding-right:14px; height:430px;">
+			<div class="middle aligned one wide column" style="padding-left:14px; padding-right:14px; height:450px;">
 				<div class="ui vertical divider">info</div> 
 			</div>
 			<div class="ten wide column" style="padding-left:0px; height:450px;">
 				<div class ="middle aligned" style="height:370px;">
 					<div style = "text-align:center;">
-						<i class="center aligned massive cube icon"></i><h1>Hakurei Docker Image</h1>
+						<i class="center aligned massive cube icon"></i><h2>Hakurei Docker Image</h2>
 					</div>
-					<br />
 					<div class = "ui horizontal divider" style="padding-left:5%; padding-right:5%;">檢視</div>
-					<br />
 					<div style="text-align:center">
-						<h3 id = "image" style="margin:5px;">映像Repo：尚未選擇</h3>
-						<h3 id = "dfile" style="margin:5px;">DockerFile：未選擇</h3>
+						<p id = "image" style="margin:5px;">映像Repo：尚未選擇</p>
+						<p id = "dfile" style="margin:5px;">DockerFile：未選擇</p>
+				<div id="uim" class="ui message hidden">
+					    <div class="header">
+							    DockerPull Info
+						</div>
+					    <p id = "pull"></p>
+				</div>
 					</div>
 				</div>
-				<div style="height:50px; weight:100%; text-align:right;">
+				<div style="height:20px; weight:100%; text-align:right;">
 					<button class="ui right labeled icon next button">
 						<i class="right arrow icon"></i>
 						Next
