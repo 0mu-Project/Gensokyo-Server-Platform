@@ -7,12 +7,12 @@
 {% endblock %}
 
 {% block title %}Yakumo - Gensokyo Server Platform{% endblock %}
-
+<!--
 {% block sideFrame %}
 		<a class="active item">容器管理</a>
 		<a class="item">容器模板</a>
 {% endblock %}
-
+-->
 {% block mainFrame %}
   <div class="ui grey segment">
 	<div class="ui breadcrumb">
@@ -56,7 +56,7 @@
 					  關於容器部屬
 				  </div>
 				  <ul class="list">
-					  <li>HQS 部屬 : 透過 Hakurei QuickService 直接將專案部屬為容器並提供 App-Dashboard 管理. </li>
+					  <li>HQS 部屬 : 透過 Hakurei QuickService (基於 Debian) 直接將專案部屬為容器並提供 App-Dashboard 管理. </li>
 					  <li>類VMs部屬 : 將容器部屬為類虛擬機器架構提供 SSH 界面 可提供較為進階的服務使用 就如同使用一臺 VPS. </li>
 					  <li>當然如果您知道你在做什麼您也可以直接透過 docker run 指令去命令後端幫你完成部屬</li>
 				  </ul>

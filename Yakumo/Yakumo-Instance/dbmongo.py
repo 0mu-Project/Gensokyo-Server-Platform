@@ -1,6 +1,6 @@
 import datetime
 from pymongo import MongoClient
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient('mongodb://home.dd-han.tw:27017/')
 db = client['Yakumo']
 class InitDB:
     user = db['Users']
