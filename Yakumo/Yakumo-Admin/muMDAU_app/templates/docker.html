@@ -6,7 +6,7 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
 {% endblock %}
 
-{% block title %}Yakumo - Gensokyo Server Platform{% endblock %}
+{% block title %}User - Gensokyo Server Platform{% endblock %}
 <!--
 {% block sideFrame %}
 		<a class="active item">容器管理</a>
@@ -18,47 +18,27 @@
 	<div class="ui breadcrumb">
 		  <div class="section">Hakurei</div>
 		    <div class="divider"> / </div>
-		  <div class="section">容器</div>
+		  <div class="section">權限</div>
 		    <div class="divider"> / </div>
-			<div class="active section">容器管理</div>
+			<div class="active section">使用者</div>
 	</div>
 	<div class="ui divider"></div>
 		  <div class="sixteen wide  aligned column">
 	  	  <a class="ui left black ribbon label">
-		  容器佈署
+		  新增使用者
 	  	  </a>
 		  <div class="ui middle aligned very relaxed stackable grid" style="padding: 12px 0px 0px 0px">
-			  <div class="four wide column" style="padding-right:14px;">
-				  <div class="center aligned column">
-					  <div class="ui buttons">
-						    <button class="ui quick small blue button">HQS 佈署</button>
-							  <div class="or" data-text="/"></div>
-						    <button class="ui dimage small green button">類VMs佈署</button>
-					  </div>
-				  </div>
 				  {% include "images.html" %}
 				  {% include "containers.html" %}
-				  {% include "quickt1.html" %}
-
-			  </div>
-			  <div class="one wide column" style="padding-right:14px;">
-				 OR 
-			  </div>
-			  <div class="eleven wide column" style="">
-				  <div class="ui icon fluid small input">
-					    <input placeholder="直接輸入 docker 指令 (ex: docker run --name example ex:example)" type="text">
-						  <i class="circular terminal link icon"></i>
-				  </div>
-			  </div>
 			  <div class="sixteen wide column" style="">
 			  <div class="ui message">
+						    <button class="ui dimage fluid big green button">新增使用者並產生專屬容器</button>
+							<div class="ui divider"></div>
 				  <div class = "header">
-					  關於容器佈署
+					  關於使用者新增
 				  </div>
 				  <ul class="list">
-					  <li>HQS 佈署 : 透過 Hakurei QuickService (基於 Debian) 直接將專案佈署為容器並提供 App-Dashboard 管理. </li>
-					  <li>類VMs佈署 : 將容器佈署為類虛擬機器, 可提供較為進階的服務使用. </li>
-					  <li>當然如果您知道你在做什麼您也可以直接透過 docker run 指令去命令後端幫你完成佈署</li>
+					  <li>每個使用者就是一個容器，其有容器的最高管理權限 </li>
 				  </ul>
 			  </div>
 			  </div>
@@ -66,18 +46,15 @@
 		  </div>
 		  <div class ="ui divider"></div>
 	  	  <a class="ui left black ribbon label">
-		  容器一覽
+		  使用者一覽
 	  	  </a>
 		  <table class="ui compact celled definition table">
 			  <thead>
 				      <tr>
 						  <th></th>
-						  <th>執行</th>
-						  <th>ID</th>
-						  <th>容器名稱</th>
-						  <th>容器映像</th>
+						  <th>使用者名稱</th>
+						  <th>對應容器ID</th>
 						  <th>Ports (C:H)</th>
-						  <th>執行指令</th>
 						  <th>運作狀況</th>
 					  </tr>
 			  </thead>
@@ -95,20 +72,9 @@
 							  <input type="checkbox"> <label></label>
 						  </div>
 					  </td>
-					  <td class="collapsing">
-						  <div class="ui fitted slider checkbox">
-				{% if x.get('Status')[0:4] == "Exit"%}
-				<input id="{{x.get('Names')[0].replace('/','')}}" type="checkbox"><label></label>
-				{% elif x.get('Status')[0:4] == "Crea"%}
-				<input id="{{x.get('Names')[0].replace('/','')}}" type="checkbox"><label></label>
-				{% else %}
-				<input id="{{x.get('Names')[0].replace('/','')}}" type="checkbox" checked="True"> <label></label>
-  			    {% endif %}
-						  </div>
 					  </td>
-					  <td>{{x.get('Id')[0:12]}}</td>
 					  <td>{{x.get('Names')[0].replace('/','')}}</td>
-					  <td>{{x.get('Image')}}</td>
+					  <td>{{x.get('Id')[0:12]}}</td>
 					  <td>
 						  {% if x.get('Ports')== [] %}
 						  None
@@ -120,7 +86,6 @@
 						  {% endfor %}
 						  {% endif %}
 					  </td>
-					  <td>{{x.get('Command')}}</td>
 					  <td>{{x.get('Status')}}</td>
 				  </tr>
 				  {% endfor %}
@@ -128,12 +93,6 @@
 				 <tfoot class="full-width">
 				  <tr >
 							      <th colspan="9" style="padding:5px;">
-									<div class="ui right floated tiny green labeled icon button">
-										          <i class="save icon"></i> 備份
-									</div>
-									<div class="ui right floated tiny orange labeled icon button">
-										          <i class="add icon"></i> 鏡像化
-									</div>
 									<div class="ui right floated tiny red icon button">
 										          <i class="remove icon"></i>
 									</div>

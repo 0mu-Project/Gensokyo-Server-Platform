@@ -1,0 +1,73 @@
+<div class="ui large dimage modal">
+	<div class="ui two tiny steps">
+		<div class="active step">
+			<i class="user icon"></i>
+			<div class="content">
+				<div class="title">使用者容器設定</div>
+				<div class="description">輸入/選擇使用者模板</div>
+			</div>
+		</div>
+		<div class="step">
+			<i class="checkmark icon"></i>
+			<div class="content">
+				<div class="title">確認新增使用者</div>
+				<div class="description">確認設定並且啟動容器</div>
+			</div>
+		</div>
+	</div>
+	<div class="content"style="padding-top:5px;">
+		<div class="ui very relaxed stackable grid">
+			<div class="middle aligned five wide column" style="padding-right:0px; height:450px;">
+					<div style = "text-align:center;">
+						<i class="center aligned massive users icon"></i>
+				</div>
+					<br />
+					<div class="ui horizontal divider" style="margin-bottom:30px;">Gensokoyo-UserCenter</div>
+				<div class="ui message">
+					<div class="header">關於 使用者 與 專屬容器</div>
+					<p>一個使用者即為一個專屬容器</p>
+					<p>專屬容器:</p>
+					<ul class="list">
+						<li>擁有權限創建非特權專案子容器</li>
+						<li>提供一特殊 Shell 管理專案子容器</li>
+						<li>提供多組網域名稱進行綁定</li>
+						<li>可自由調度非特權子容器規格</li>
+						</ul>
+				</div>
+			</div>
+			<div class="middle aligned one wide column" style="padding-left:14px; padding-right:14px; height:450px;">
+				<div class="ui vertical divider">info</div> 
+			</div>
+			<div class="ten wide column" style="padding-left:0px; height:450px;">
+				<div class ="middle aligned" style="height:370px;">
+					<h3 class="ui dividing header">基本設定<a id="variations" class="anchor"></a></h3>	
+					<div class="ui left icon input" style="width:49%; float:left;">
+						  <input placeholder="使用者名稱" type="text">
+						    <i class="user icon"></i>
+					</div>
+					<div class="ui left icon input" style="width:49%; float:right;">
+						  <input placeholder="Email" type="text">
+						    <i class="mail icon"></i>
+					</div>
+					<br/>
+					<br/>
+					<h3 class="ui dividing header">容器設定<a id="variations" class="anchor"></a></h3>	
+					<div class="ui left icon input" style="width:49%; float:left;">
+						  <input placeholder="CPU 分割率（留空為無限制）" type="text">
+						    <i class="spinner icon"></i>
+					</div>
+					<div class="ui left icon input" style="width:49%; float:right;">
+						  <input placeholder="記憶體上限（留空為2GB預設）" type="text">
+						    <i class="tasks icon"></i>
+					</div>
+				</div>
+				<div style="height:20px; weight:100%; text-align:right;">
+					<button class="ui right labeled icon next button">
+						<i class="right arrow icon"></i>
+						Next
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

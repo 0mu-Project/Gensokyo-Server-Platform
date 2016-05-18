@@ -1,0 +1,70 @@
+<div class="ui large qchoose modal">
+	<div class="ui two tiny steps">
+		<div class="active step">
+			<i class="user icon"></i>
+			<div class="content">
+				<div class="title">使用者容器設定</div>
+				<div class="description">選擇/輸入資訊</div>
+			</div>
+		</div>
+		<div class="step">
+			<i class="power icon"></i>
+			<div class="content">
+				<div class="title">確認新增</div>
+				<div class="description">確認設定並且啟動容器</div>
+			</div>
+		</div>
+	</div>
+	<div class="content"style="padding-top:5px;">
+		<div class="ui very relaxed stackable grid">
+			<div class="middle aligned five wide column" style="padding-right:0px; height:450px;">
+					<div style = "text-align:center;">
+						<i class="center aligned massive users icon"></i>
+					</div>
+					<br />
+					<div class="ui horizontal divider" style="margin-bottom:30px;">Gensokoyo-UserCenter</div>
+				<div class="ui message">
+					<div class="header">關於 使用者 與 專屬容器</div>
+					<p>一個使用者即為一個專屬容器</p>
+					<p>專屬容器:</p>
+					<ul class="list">
+						<li>擁有權限創建非特權專案子容器</li>
+						<li>提供一特殊 Shell 管理專案子容器</li>
+						<li>提供多組網域名稱進行綁定</li>
+						<li>可自由調度非特權子容器規格</li>
+						</ul>
+				</div>
+			</div>
+			<div class="middle aligned one wide column" style="padding-left:14px; padding-right:14px; height:450px;">
+				<div class="ui vertical divider">HQS</div> 
+			</div>
+			<div class="ten wide column" style="padding-left:0px; height:450px;">
+				<div class="ui floating labeled icon hqsp dropdown blue fluid large button" style="text-align:center;">
+					<i class="disk outline icon"></i>
+					<span class="text">選擇使用者樣板</span>
+					<div class="menu">
+						<div class="ui icon search input">
+							<i class="search icon"></i>
+							<input placeholder="Search tags..." type="text">
+						</div>
+						<div class="divider"></div>
+						<div class="header">
+							<i class="disk outline icon"></i>
+							可用映像檔
+						</div>
+						<div class="scrolling menu">
+							{% for im in images %}
+							<div class="item">
+								<i class="cubes icon"></i>
+								{{im.get('RepoTags')[0]}} 
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+					<div class="ui horizontal divider">或手動設定</div>
+			</div>
+		</div>
+	</div>
+</div>
+
