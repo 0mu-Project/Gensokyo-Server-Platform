@@ -38,7 +38,7 @@
 					  關於使用者新增
 				  </div>
 				  <ul class="list">
-					  <li>每個使用者就是一個容器，其有容器的最高管理權限 </li>
+					  <li>每個使用者就是一個容器，其有容器的子容器權限 </li>
 				  </ul>
 			  </div>
 			  </div>
@@ -104,30 +104,10 @@
 <script>
 
 $(document).ready(function(){
-$('.ui.rimages.dropdown')
-	.dropdown({
-		action: 'select',
-		onChange : function(text, value, $selectedItem){
-		document.getElementById('image').innerHTML = "映像Repo：" + text;
-		document.getElementById('cimages').innerHTML = "映像Repo：" + text;
-		document.getElementById('dfile').innerHTML = "DockerFile：不採用" ;
-		document.getElementById('cdfile').innerHTML = "DockerFile：不採用" ;
-		}
-	})
-;
-$('.ui.hqsp.dropdown')
-	.dropdown()
-;
 $('.coupled.modal')
 	  .modal({
 		      allowMultiple: false
-				    })
-;
-$('.qchoose.modal')
-	.modal({
-		blurring: true
-	})
-	.modal('attach events', '.quick.button', 'show')
+	  })
 ;
 $('.dimage.modal')
 	.modal({
@@ -138,28 +118,7 @@ $('.dimage.modal')
 	$('.dset.modal')
 		  .modal('attach events', '.dimage.modal .next.button')
 		  ;
-{% for x in c %}
-$('#{{x.get('Names')[0].replace('/','')}}').click(function() {
-	if($('#{{x.get('Names')[0].replace('/','')}}').prop("checked")) {
-		  $.get( "/docker/start/{{ x.get('Names')[0].replace('/','') }}", function( data ) {
-			  location.reload(true);
-		  })
-	} else {
-		  $.get( "/docker/stop/{{ x.get('Names')[0].replace('/','') }}", function( data ) {
-			  location.reload(true);
-		  })
-	}
 })
-{% endfor %}
-})
-$('.dpull.link.icon').click(function(){
-var data = $('#dpull').val();
-$.post("/docker/pull/" + data);
-var socket = io.connect('http://' + document.domain + ':' + location.port + '/pull/info');
-$("#uim").removeClass("hidden");
-socket.on('pull', function(msg){
-document.getElementById('pull').innerHTML = msg.info;
-})
-});
+;
 </script>
 {% endblock %}

@@ -1,9 +1,25 @@
 import datetime
-import setting 
+import setting
+from  udockeri import info
 from pymongo import MongoClient
 from github import Github
 client = MongoClient(setting.mongohost)
 db = client['Yakumo']
+dbc = client['Hakurei']
+class UserContianerReg:
+    def add(name):
+        cname = dbc[str(name)]
+        clist = info(name)
+        raw = {"CPUUsage" : clist[0],
+                "RAMUsage" : clist[1],
+                "RAMLimit" : clist[2],
+                "RAMPercent" : clist[3],
+                "RX" : clist[4],
+                "TX" : clist[5],
+                 "date": datetime.datetime.utcnow()
+                }
+        clist.insert_one(raw)
+
 class InitDB:
     user = db['Users']
 

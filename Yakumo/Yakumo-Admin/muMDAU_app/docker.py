@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # muMDAU_app main / first page 
 from muMDAU_app import app
-from flask import render_template, url_for, redirect, session, request 
+from flask import render_template, url_for, redirect, session 
 from docker import Client
 import subprocess
 pullthread = None
@@ -26,12 +26,12 @@ def run(Name, Mail, CPU, Mem):
         import hashlib
         import random
         ans = random.uniform(1, 10)
-        hashpass = hashlib.sha1(str(ans).encode())
+        hashpass = hashlib.sha1(str(ans).replace('\n', '').encode())
         print(hashpass)
-        subprocess.call('useradd '+ Name +' -m -p '+ hashpass +' -s /bin/hshell', Shell=True)
-        subprocess.call('gpasswd -a '+ Name +' docker', Shell=True)
+        subprocess.call('useradd ' + Name + ' -m -p  ' + hashpass + ' -s /bin/hshell', Shell=True)
+        subprocess.call('gpasswd -a ' + Name + ' docker', Shell=True)
         clir = Client(base_url='unix://var/run/docker.sock')
-        clirt = clir.create_container(hostname=str(Name+'-dind'),tty=True, detach=True, image='hakurei-dind', name=str(Name) ,cpu_shares=int(CPU), host_config=clir.create_host_config(mem_limit=str(Mem),privileged=True))
+        clirt = clir.create_container(hostname=str(Name + '-dind'), tty=True, detach=True, image='hakurei-dind', name=str(Name), cpu_shares=int(CPU), host_config=clir.create_host_config(mem_limit=str(Mem), privileged=True))
         clir.start(clirt.get('Id'))
         print(clirt.get('Id'))
         print(Mail)
