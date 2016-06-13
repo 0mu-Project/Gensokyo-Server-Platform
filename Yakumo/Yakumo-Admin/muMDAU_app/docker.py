@@ -26,10 +26,10 @@ def run(Name, Mail, CPU, Mem):
         import hashlib
         import random
         ans = random.uniform(1, 10)
-        hashpass = hashlib.sha1(str(ans).replace('\n', '').encode())
+        hashpass = hashlib.sha1(str(ans).replace('\n', '').encode()).hexdigest()
         print(hashpass)
-        subprocess.call('useradd ' + Name + ' -m -p  ' + hashpass + ' -s /bin/hshell', Shell=True)
-        subprocess.call('gpasswd -a ' + Name + ' docker', Shell=True)
+        subprocess.call('useradd ' + Name + ' -m -p ' + str(hashpass) + ' -s /bin/hshell', shell=True)
+        subprocess.call('gpasswd -a ' + Name + ' docker', shell=True)
         clir = Client(base_url='unix://var/run/docker.sock')
         clirt = clir.create_container(hostname=str(Name + '-dind'), tty=True, detach=True, image='hakurei-dind', name=str(Name), cpu_shares=int(CPU), host_config=clir.create_host_config(mem_limit=str(Mem), privileged=True))
         clir.start(clirt.get('Id'))

@@ -5,7 +5,6 @@ import sys
 import os
 import subprocess
 def get_distribution():
-    subprocess.call(['head -n 1 /etc/os-release | sed -r \'s/NAME=//g\' | sed -r  \'s/"//g\'  > /tmp/osver'], shell=True)
     with open('/tmp/osver') as f:
         version = f.read().lower().split()[0]
         dicti = {'arch': lambda: 'pacman --noconfirm -Syu ', 
@@ -59,6 +58,10 @@ def checkpython():
     else:
         return 'python2'
 
+def docker_images():
+    print('# Make the images of dind compose system.')
+    subprocess.call(['docker '], shell=True)
+
 # run master branch git pull to update server
 def version_update():
     print('# Git status')
@@ -70,6 +73,7 @@ if __name__ == '__main__':
         if not os.geteuid() == 0:
             sys.exit('Installer must run as root')
         else:
+            subprocess.call(['head -n 1 /etc/os-release | sed -r \'s/NAME=//g\' | sed -r  \'s/"//g\'  > /tmp/osver'], shell=True)
             package_install()
     else:
         print('install.lock is aviable , please make sure installer is run or not.')
