@@ -26,7 +26,7 @@ if __name__ == '__main__':
             logging.basicConfig(filename=setting.s_log, level=logging.WARNING)
             logdebug = open(setting.s_log, 'w')
             print('!!!Important : Now is in debug mode.')
-            socketio.run(app, debug=debugB, log=logdebug, host=str(setting.host), port=setting.port)
+            socketio.run(app, debug=debugB, host=str(setting.host), port=setting.port)
     else:
         sys.exit('Yakumo Admin must run as root')
          

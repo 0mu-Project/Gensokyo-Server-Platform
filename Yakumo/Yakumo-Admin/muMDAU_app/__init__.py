@@ -4,10 +4,8 @@
 from flask import Flask, request, session, redirect, url_for
 from flask import render_template 
 from flask_socketio import SocketIO
-import eventlet
-eventlet.monkey_patch()
 app = Flask(__name__)
-socketio = SocketIO(app, async_mode='eventlet')
+socketio = SocketIO(app)
 import subprocess
 import muMDAU_app.login 
 import muMDAU_app.docker 

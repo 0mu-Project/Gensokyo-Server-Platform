@@ -3,6 +3,7 @@
 from muMDAU_app import app
 from flask import render_template, url_for, redirect, session 
 from docker import Client
+from dbmongo import User
 import subprocess
 pullthread = None
 # index page main route page 
@@ -28,6 +29,7 @@ def run(Name, Mail, CPU, Mem):
         ans = random.uniform(1, 10)
         hashpass = hashlib.sha1(str(ans).replace('\n', '').encode()).hexdigest()
         print(hashpass)
+        User.addIns(Name,hashpass)
         subprocess.call('useradd ' + Name + ' -m -p ' + str(hashpass) + ' -s /bin/hshell', shell=True)
         subprocess.call('gpasswd -a ' + Name + ' docker', shell=True)
         clir = Client(base_url='unix://var/run/docker.sock')

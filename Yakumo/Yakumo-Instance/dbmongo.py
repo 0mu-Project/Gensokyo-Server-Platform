@@ -3,20 +3,11 @@ import setting
 from pymongo import MongoClient
 from github import Github
 client = MongoClient(setting.mongohost)
-db = client['Yakumo']
+db = client['YakumoIns']
 class InitDB:
     user = db['Users']
 
 class User:
-    def add(username, password, admin):
-        user = db['Users']
-        user.create_index("user", unique=True)
-        raw = {"user": username,
-                "password": password,
-                "admin": admin,
-                "date": datetime.datetime.utcnow()}
-        print(user.insert_one(raw).inserted_id)
-
     def login(username):
         try:
             user = db['Users']

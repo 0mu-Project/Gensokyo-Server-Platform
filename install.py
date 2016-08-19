@@ -3,7 +3,7 @@
 # Server first time install py
 import sys
 import os
-import subprocess
+from subprocess import call 
 def get_distribution():
     with open('/tmp/osver') as f:
         version = f.read().lower().split()[0]
@@ -22,7 +22,7 @@ def package_install():
         with open('./installer/pack/package_' + version + '.need') as pack:
             package = pack.read().lower()
             print(package)
-            subprocess.call([str(get_distribution()) + str(package)], shell=True)
+            call([str(get_distribution()) + str(package)], shell=True)
 
 # check version_info of python 
 def checkpython():
@@ -39,11 +39,11 @@ def checkpython():
                     print('You dont have flask install , Auto Install!')
                     print('Please enter root password !')
                     # call subprocess to install unfound modules
-                    subprocess.call(['sudo pypy3 -m pip install Flask'], shell=True)
-                    subprocess.call(['sudo pypy3 -m pip install six'], shell=True)
+                    call(['sudo pypy3 -m pip install Flask'], shell=True)
+                    call(['sudo pypy3 -m pip install six'], shell=True)
                 except ImportError:
                     print('You dont have pip install , please input your password to install ')
-                    subprocess.call(['curl -s https://bootstrap.pypa.io/get-pip.py |sudo pypy3'], shell=True)
+                    call(['curl -s https://bootstrap.pypa.io/get-pip.py |sudo pypy3'], shell=True)
                 return 'pypy3'
         else:
             try:
@@ -52,20 +52,28 @@ def checkpython():
             except ImportError:
                 print('You dont have flask install , please input your password to install flask . ')
                 # call subprocess to install unfound modules
-                subprocess.call(['sudo python3 -m pip install Flask'], shell=True)
-                subprocess.call(['sudo python3 -m pip install six'], shell=True)
+                call(['sudo python3 -m pip install Flask'], shell=True)
+                call(['sudo python3 -m pip install six'], shell=True)
                 return 'python3'
     else:
         return 'python2'
 
-def docker_images():
-    print('# Make the images of dind compose system.')
-    subprocess.call(['docker '], shell=True)
+def flask_installer():
+    os.mkdir('/tmp/gensokyo')
+    call(['git clone https://github.com/0mu-project/flask.git'], shell=True, cwd='/tmp/gensokyo')
+
 
 # run master branch git pull to update server
 def version_update():
     print('# Git status')
-    subprocess.call(['git pull'], shell=True)
+    call(['git pull'], shell=True)
+
+def docker_preenv():
+    call(['curl -sSL https://get.docker.com/ | sh'],shell=True)
+    call(['docker network create --subnet=172.99.0.0/16 dns0'],shell=True)
+    call(['docker run -it -d --name="dns" --hostname="dns" --net dns0 --ip 172.99.0.255 -v /var/run/docker.sock:/docker.sock phensley/docker-dns'],shell=True)
+    call(['docker build ./Hakurei/hakurei-dind/'], shell=True)
+
 
 # Main class 
 if __name__ == '__main__':
@@ -73,7 +81,7 @@ if __name__ == '__main__':
         if not os.geteuid() == 0:
             sys.exit('Installer must run as root')
         else:
-            subprocess.call(['head -n 1 /etc/os-release | sed -r \'s/NAME=//g\' | sed -r  \'s/"//g\'  > /tmp/osver'], shell=True)
+            call(['head -n 1 /etc/os-release | sed -r \'s/NAME=//g\' | sed -r  \'s/"//g\'  > /tmp/osver'], shell=True)
             package_install()
     else:
         print('install.lock is aviable , please make sure installer is run or not.')

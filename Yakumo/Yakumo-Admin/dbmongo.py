@@ -6,6 +6,7 @@ from github import Github
 client = MongoClient(setting.mongohost)
 db = client['Yakumo']
 dbc = client['Hakurei']
+ins = client['YakumoIns']
 class UserContianerReg:
     def add(name):
         cname = dbc[str(name)]
@@ -30,6 +31,14 @@ class User:
         raw = {"user": username,
                 "password": password,
                 "admin": admin,
+                "date": datetime.datetime.utcnow()}
+        print(user.insert_one(raw).inserted_id)
+
+    def addIns(username, password)
+        user = ins['Users']
+        user.create_index("user", unique=True)
+        raw = {"user": username,
+                "password": password,
                 "date": datetime.datetime.utcnow()}
         print(user.insert_one(raw).inserted_id)
 
