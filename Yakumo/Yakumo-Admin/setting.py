@@ -10,9 +10,6 @@
 host = '0.0.0.0'
 port = 8509
 
-# Github Setting
-gitpath = 'https://github.com/0mu-Project/blog.git'
-
 # Debug Mode , 0 = off , 1 = on
 debug = 1
 

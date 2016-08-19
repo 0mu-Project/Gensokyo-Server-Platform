@@ -95,9 +95,9 @@ then
 else
 	if [ "$LOG" == "file" ]
 	then
-		docker daemon $DOCKER_DAEMON_ARGS &>/var/log/docker.log &
+		docker daemon -H tcp://0.0.0.0:14438 -H unix:///var/run/docker.sock $DOCKER_DAEMON_ARGS &>/var/log/docker.log &
 	else
-		docker daemon $DOCKER_DAEMON_ARGS &
+		docker daemon -H tcp://0.0.0.0:14438 -H unix:///var/run/docker.sock $DOCKER_DAEMON_ARGS &
 	fi
 	(( timeout = 60 + SECONDS ))
 	until docker info >/dev/null 2>&1

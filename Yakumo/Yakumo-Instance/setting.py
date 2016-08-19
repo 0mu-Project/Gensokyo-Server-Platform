@@ -17,7 +17,7 @@ gitpath = 'https://github.com/0mu-Project/blog.git'
 debug = 1
 
 # Server Log Dump Location
-s_log = '../../debug/Yakumo.log'
+s_log = '../Yakumo.log'
 
 # Database Setting
 sqliteFile = '../../sqlite/Yakumo.db'

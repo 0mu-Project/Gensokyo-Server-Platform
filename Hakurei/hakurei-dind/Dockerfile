@@ -21,10 +21,6 @@ RUN chmod +x /usr/local/bin/wrapdocker
 RUN mkdir -p  /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Yakumo-Instance install 
-RUN mkdir -p /opt/yakumo-instance
-COPY ../../Yakumo/Yakumo-Instance/ /opt/yakumo-instance
-
 
 # Define additional metadata for our image.
 VOLUME /var/lib/docker
