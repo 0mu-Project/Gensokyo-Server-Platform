@@ -1,2 +1,1 @@
-WARNING:werkzeug:WebSocket transport not available. Install eventlet or gevent and gevent-websocket for improved performance.
 WARNING:werkzeug: * Debugger is active!

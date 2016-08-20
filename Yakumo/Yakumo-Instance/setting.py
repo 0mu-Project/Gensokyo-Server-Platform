@@ -8,7 +8,7 @@
 
 # Server Setting
 host = '0.0.0.0'
-port = 8509
+port = 8080
 
 # Github Setting
 gitpath = 'https://github.com/0mu-Project/blog.git'
@@ -23,7 +23,7 @@ s_log = '../Yakumo.log'
 sqliteFile = '../../sqlite/Yakumo.db'
 
 ##
-yourkey = 'jfowjwo9w??{{@@jrejk__'
+yourkey = 'jfowpppjwo9w??{{@@jrejk__'
 imgurkey = '0c2b6130b066faf'
 
 ##

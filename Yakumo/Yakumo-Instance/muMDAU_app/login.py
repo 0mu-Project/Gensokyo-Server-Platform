@@ -9,14 +9,13 @@ def login():
     if request.method == 'POST':
         user = request.form['buser']
         passd = request.form['bpass']
-
         password = User.login(user)
+        print(password)
 
         if not password:
             return '帳號錯誤'
         else:
-            hashsha = hashlib.sha256(passd.replace('\n', '').encode())
-            if password == hashsha.hexdigest():
+            if password == passd:
                 session['username'] = user
                 return redirect(url_for('main.index'))
             else:

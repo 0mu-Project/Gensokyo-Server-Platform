@@ -34,7 +34,7 @@ class User:
                 "date": datetime.datetime.utcnow()}
         print(user.insert_one(raw).inserted_id)
 
-    def addIns(username, password)
+    def addIns(username, password):
         user = ins['Users']
         user.create_index("user", unique=True)
         raw = {"user": username,

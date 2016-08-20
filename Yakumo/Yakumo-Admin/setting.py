@@ -8,7 +8,7 @@
 
 # Server Setting
 host = '0.0.0.0'
-port = 8509
+port = 80
 
 # Debug Mode , 0 = off , 1 = on
 debug = 1
