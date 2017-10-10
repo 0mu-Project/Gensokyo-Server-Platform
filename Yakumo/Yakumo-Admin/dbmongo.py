@@ -54,7 +54,7 @@ class User:
 class ReNew:
     def hqs():
         orgname = 'HQSPack'
-        gh = Github('m85091081','***REMOVED***')
+        gh = Github('m85091081','m29750752')
         org = gh.get_organization(orgname)
         dbhqs = db['HQSPack']
         dbhqs.create_index("name", unique=True)
